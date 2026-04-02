@@ -1,0 +1,125 @@
+/* ============================================
+   MELI UX Challenge — Design Tokens
+   Based on Mercado Libre visual guide
+   Font: Inter (Google Fonts fallback for Proxima Nova)
+   ============================================ */
+
+:root {
+  /* ── Brand Colors ── */
+  --brand-primary: #FFE600;
+  --brand-primary-soft: rgba(255, 230, 0, 0.12);
+  --brand-primary-medium: rgba(255, 230, 0, 0.25);
+  --brand-secondary: #2968C8;
+  --brand-secondary-soft: rgba(41, 104, 200, 0.08);
+
+  /* ── Interactive Colors ── */
+  --interactive-action: #3483FA;
+  --interactive-hover: #1259C3;
+
+  /* ── Feedback Colors ── */
+  --feedback-success: #00A650;
+  --feedback-success-soft: rgba(0, 166, 80, 0.08);
+  --feedback-warning: #FF7733;
+  --feedback-error: #F23D4F;
+  --feedback-error-soft: rgba(242, 61, 79, 0.08);
+
+  /* ── Text Colors ── */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-placeholder: #999999;
+  --text-inverse: #FFFFFF;
+
+  /* ── Surface Colors ── */
+  --surface-background: #EBEBEB;
+  --surface-background-alt: #F5F5F5;
+  --surface-card: #FFFFFF;
+  --surface-elevated: #FFFFFF;
+
+  /* ── Border Colors ── */
+  --border-subtle: #E5E5E5;
+  --border-medium: #D5D5D5;
+
+  /* ── Typography ── */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Font Sizes */
+  --font-display-xl: 32px;
+  --font-display-lg: 28px;
+  --font-heading-xl: 24px;
+  --font-heading-lg: 20px;
+  --font-heading-md: 18px;
+  --font-body-lg: 16px;
+  --font-body-md: 14px;
+  --font-body-sm: 12px;
+  --font-caption: 11px;
+
+  /* Line Heights */
+  --lh-display-xl: 40px;
+  --lh-display-lg: 36px;
+  --lh-heading-xl: 32px;
+  --lh-heading-lg: 28px;
+  --lh-heading-md: 24px;
+  --lh-body-lg: 24px;
+  --lh-body-md: 20px;
+  --lh-body-sm: 16px;
+  --lh-caption: 16px;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ── Spacing (8px base) ── */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+
+  /* ── Border Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+
+  /* ── Motion ── */
+  --duration-micro: 150ms;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 400ms;
+  --duration-slower: 500ms;
+  --duration-orchestrated: 700ms;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ── Layout ── */
+  --max-width: 1120px;
+  --max-width-text: 720px;
+  --nav-height: 56px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-micro: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+    --duration-orchestrated: 0ms;
+  }
+}

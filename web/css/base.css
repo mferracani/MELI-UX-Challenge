@@ -1,0 +1,165 @@
+/* ============================================
+   MELI UX Challenge — Base Styles
+   Reset, typography, layout utilities
+   ============================================ */
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-body-lg);
+  line-height: var(--lh-body-lg);
+  font-weight: var(--weight-regular);
+  color: var(--text-primary);
+  background-color: var(--surface-background);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--interactive-action);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--interactive-hover);
+}
+
+/* ── Typography ── */
+.text-display-xl {
+  font-size: var(--font-display-xl);
+  line-height: var(--lh-display-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.text-display-lg {
+  font-size: var(--font-display-lg);
+  line-height: var(--lh-display-lg);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.text-heading-xl {
+  font-size: var(--font-heading-xl);
+  line-height: var(--lh-heading-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.text-heading-lg {
+  font-size: var(--font-heading-lg);
+  line-height: var(--lh-heading-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.text-heading-md {
+  font-size: var(--font-heading-md);
+  line-height: var(--lh-heading-md);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.text-body-lg {
+  font-size: var(--font-body-lg);
+  line-height: var(--lh-body-lg);
+  font-weight: var(--weight-regular);
+  color: var(--text-primary);
+}
+
+.text-body-md {
+  font-size: var(--font-body-md);
+  line-height: var(--lh-body-md);
+  font-weight: var(--weight-regular);
+  color: var(--text-secondary);
+}
+
+.text-body-sm {
+  font-size: var(--font-body-sm);
+  line-height: var(--lh-body-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-placeholder);
+}
+
+.text-caption {
+  font-size: var(--font-caption);
+  line-height: var(--lh-caption);
+  font-weight: var(--weight-medium);
+  color: var(--text-placeholder);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Layout ── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container--narrow {
+  max-width: var(--max-width-text);
+}
+
+.section {
+  padding: var(--space-4xl) 0;
+  position: relative;
+}
+
+.section--white {
+  background-color: var(--surface-card);
+}
+
+.section--grey {
+  background-color: var(--surface-background);
+}
+
+.section--alt {
+  background-color: var(--surface-background-alt);
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--brand-primary);
+  color: var(--text-primary);
+}
+
+/* ── Scrollbar (Webkit) ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-placeholder);
+}

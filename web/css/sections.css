@@ -1,0 +1,116 @@
+/* ============================================
+   MELI UX Challenge — Section-Specific Styles
+   Hero and section layout overrides
+   ============================================ */
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--surface-background) 0%, var(--surface-card) 60%, var(--surface-background-alt) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-4xl) 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--brand-primary-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--brand-secondary-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__badge {
+  margin-bottom: var(--space-lg);
+}
+
+.hero__title {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__title span {
+  display: block;
+}
+
+.hero__title .hero__title-accent {
+  color: var(--brand-secondary);
+}
+
+.hero__subtitle {
+  font-size: var(--font-heading-lg);
+  line-height: var(--lh-heading-lg);
+  font-weight: var(--weight-regular);
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin-bottom: var(--space-xl);
+}
+
+.hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__visual img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.08));
+}
+
+/* ── Section Backgrounds ── */
+#brief {
+  background: var(--surface-card);
+}
+
+#problema {
+  background: var(--surface-background);
+}
+
+#investigar {
+  background: var(--surface-card);
+}
+
+/* ── Section spacing refinement ── */
+.section:first-of-type {
+  padding-top: calc(var(--space-4xl) + var(--nav-height));
+}

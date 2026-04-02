@@ -1,0 +1,101 @@
+/* ============================================
+   MELI UX Challenge — Motion & Animations
+   Scroll reveals, transitions, count-ups
+   ============================================ */
+
+/* ── Scroll Reveal Base ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal from left */
+.reveal--left {
+  transform: translateX(-30px);
+}
+
+.reveal--left.is-revealed {
+  transform: translateX(0);
+}
+
+/* Reveal from right */
+.reveal--right {
+  transform: translateX(30px);
+}
+
+.reveal--right.is-revealed {
+  transform: translateX(0);
+}
+
+/* Scale reveal */
+.reveal--scale {
+  transform: scale(0.95);
+}
+
+.reveal--scale.is-revealed {
+  transform: scale(1);
+}
+
+/* ── Stagger Delays ── */
+.stagger-1 { transition-delay: 60ms; }
+.stagger-2 { transition-delay: 120ms; }
+.stagger-3 { transition-delay: 180ms; }
+.stagger-4 { transition-delay: 240ms; }
+.stagger-5 { transition-delay: 300ms; }
+.stagger-6 { transition-delay: 360ms; }
+.stagger-7 { transition-delay: 420ms; }
+
+/* ── Hero Entrance ── */
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroReveal var(--duration-orchestrated) var(--ease-out) forwards;
+}
+
+.hero-reveal--badge { animation-delay: 100ms; }
+.hero-reveal--title { animation-delay: 200ms; }
+.hero-reveal--subtitle { animation-delay: 350ms; }
+.hero-reveal--metrics { animation-delay: 500ms; }
+.hero-reveal--cta { animation-delay: 650ms; }
+.hero-reveal--visual { 
+  animation-delay: 300ms;
+  transform: translateX(20px);
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .scroll-cta__arrow {
+    animation: none;
+  }
+
+  .stagger-1, .stagger-2, .stagger-3,
+  .stagger-4, .stagger-5, .stagger-6, .stagger-7 {
+    transition-delay: 0ms;
+  }
+}
