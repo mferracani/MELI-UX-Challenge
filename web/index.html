@@ -52,10 +52,15 @@
       <span class="route-nav__label">03 · Investigar</span>
     </a>
 
-    <div class="route-nav__node route-nav__node--soon">
+    <a class="route-nav__node" href="#solucion" data-section="solucion">
       <div class="route-nav__dot"></div>
-      <span class="route-nav__label">Próximamente</span>
-    </div>
+      <span class="route-nav__label">04 · Solución</span>
+    </a>
+
+    <a class="route-nav__node" href="#impacto" data-section="impacto">
+      <div class="route-nav__dot"></div>
+      <span class="route-nav__label">05 · Impacto</span>
+    </a>
   </nav>
 
   <!-- ════════════════════════════════════════
@@ -106,6 +111,36 @@
 
 
   <!-- ════════════════════════════════════════
+       EXECUTIVE SUMMARY
+       ════════════════════════════════════════ -->
+  <section class="section section--white" style="padding-top: var(--space-2xl); padding-bottom: var(--space-xl);">
+    <div class="container">
+      <div class="exec-summary reveal">
+        <div class="exec-summary__label">Resumen ejecutivo</div>
+        <div class="exec-summary__grid">
+          <div class="exec-summary__item">
+            <div class="exec-summary__item-label">Señal</div>
+            <div class="exec-summary__item-value">NPS cayó <strong>4%</strong> — la causa es información mal jerarquizada en la app de ruta</div>
+          </div>
+          <div class="exec-summary__item">
+            <div class="exec-summary__item-label">Propuesta</div>
+            <div class="exec-summary__item-value"><strong>Copiloto de ruta</strong> — rediseño centrado en 5 decisiones de diseño concretas</div>
+          </div>
+          <div class="exec-summary__item">
+            <div class="exec-summary__item-label">Impacto esperado</div>
+            <div class="exec-summary__item-value">Recuperar NPS, <strong>–20% llamadas</strong> al comprador, +10% entregas/día</div>
+          </div>
+          <div class="exec-summary__item">
+            <div class="exec-summary__item-label">Mi rol</div>
+            <div class="exec-summary__item-value">Research, definición de problema, diseño de interacción, prototipado</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
        01 · BRIEF
        ════════════════════════════════════════ -->
   <section id="brief" class="section section--white">
@@ -121,15 +156,11 @@
       <!-- Context -->
       <div class="split-layout reveal">
         <div class="content-block">
-          <p>
-            <strong>Envíos Flex</strong> es la solución de Mercado Libre para entregas same day y next day operadas por la logística del propio vendedor. En ese modelo, la app no es un complemento: es la herramienta central de trabajo del transportista.
-          </p>
-          <p>
-            Desde ahí consulta sus paradas, identifica al receptor, valida la dirección y confirma cada entrega. Este es un producto que se usa en contexto de calle: arriba de una moto, entre paradas, con atención fragmentada y ventanas de lectura de apenas unos segundos.
-          </p>
-          <p>
-            Por eso, la calidad de la experiencia no depende solo de qué información existe, sino de <strong>cómo se prioriza y en qué momento aparece</strong>.
-          </p>
+          <ul class="bullet-list">
+            <li><strong>Envíos Flex</strong> es la solución de Mercado Libre para entregas same day y next day operadas por la logística del propio vendedor. <span class="source-tag source-tag--brief">Brief</span></li>
+            <li>La app es la <strong>herramienta central de trabajo</strong>: consulta de paradas, validación de dirección, identificación del receptor y confirmación de entrega.</li>
+            <li>Contexto de uso: arriba de una moto, entre paradas, con atención fragmentada y ventanas de lectura de <strong>2-3 segundos</strong>. <span class="source-tag source-tag--inferencia">Inferencia</span></li>
+          </ul>
         </div>
         <div class="split-layout__visual">
           <img src="assets/delivery-context.png" alt="Ilustración de un transportista en la puerta de un edificio consultando su celular" width="400" height="400">
@@ -139,21 +170,19 @@
       <!-- NPS Highlight -->
       <div class="nps-highlight reveal reveal--scale">
         <div class="nps-highlight__value" data-count="-4" data-suffix="%" data-prefix="">–4%</div>
-        <div class="nps-highlight__label">Caída de NPS en el último mes</div>
+        <div class="nps-highlight__label">Caída de NPS en el último mes <span class="source-tag source-tag--brief">Brief</span></div>
       </div>
 
       <!-- Context paragraph -->
       <div class="content-block content-block--full reveal">
-        <p>
-          La investigación interna apunta a una causa concreta: los transportistas necesitan <strong>más claridad y más contexto</strong> sobre la ruta y sobre cada entrega. Esta señal es relevante porque impacta directamente en la eficiencia operativa de la última milla y expone una oportunidad de mejora sin necesidad de sumar funcionalidades complejas.
-        </p>
-        <p>
-          El problema no parece estar en la falta de features. <strong>El problema está en cómo la app organiza, jerarquiza y revela información crítica durante la jornada.</strong>
-        </p>
+        <ul class="bullet-list">
+          <li>La investigación interna apunta a que los transportistas necesitan <strong>más claridad y más contexto</strong> sobre la ruta y cada entrega. <span class="source-tag source-tag--brief">Brief</span></li>
+          <li>El problema no es la falta de features. <strong>El problema es cómo la app organiza, jerarquiza y revela información crítica durante la jornada.</strong> <span class="source-tag source-tag--inferencia">Inferencia</span></li>
+        </ul>
       </div>
 
       <!-- Quotes heading -->
-      <h3 class="sub-heading reveal">Qué nos están diciendo los usuarios</h3>
+      <h3 class="sub-heading reveal">Qué nos están diciendo los usuarios <span class="source-tag source-tag--brief">Brief</span></h3>
 
       <!-- Quotes Grid -->
       <div class="quotes-grid">
@@ -208,7 +237,7 @@
 
       <!-- Insight cierre de sección -->
       <div class="insight-card reveal" style="margin-top: var(--space-2xl);">
-        <div class="insight-card__label">Insight clave</div>
+        <div class="insight-card__label">Insight clave <span class="source-tag source-tag--inferencia">Inferencia</span></div>
         <p class="insight-card__text">
           Los cuatro feedbacks convergen en una misma lectura: la app ya cuenta con gran parte de la información necesaria, pero no la entrega con la jerarquía adecuada ni en el momento operativo correcto.
         </p>
@@ -232,7 +261,7 @@
       </div>
 
       <!-- Experience Audit -->
-      <h3 class="sub-heading reveal">Qué revela la experiencia actual</h3>
+      <h3 class="sub-heading reveal">Qué revela la experiencia actual <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
       <div class="audit-grid reveal">
         <div class="audit-card">
@@ -260,7 +289,7 @@
       </div>
 
       <!-- Persona -->
-      <h3 class="sub-heading reveal">Usuario y contexto de uso</h3>
+      <h3 class="sub-heading reveal">Usuario y contexto de uso <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
       <div class="persona-card reveal">
         <div class="persona-card__image">
@@ -293,15 +322,9 @@
         </div>
       </div>
 
-      <div class="content-block reveal">
-        <p>
-          El contexto de uso refuerza la necesidad de una interfaz extremadamente clara: la atención está dividida, muchas interacciones ocurren con una sola mano, la pantalla se consulta por períodos muy breves y el entorno tiene ruido, movimiento y condiciones de luz variables.
-        </p>
-      </div>
-
       <!-- Problem Statement -->
       <div class="highlight-block reveal reveal--scale">
-        <div class="highlight-block__label">Problema formulado</div>
+        <div class="highlight-block__label">Problema formulado <span class="source-tag source-tag--inferencia" style="color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.15);">Inferencia</span></div>
         <p class="highlight-block__text">
           La app Envíos Flex no organiza ni jerarquiza la información de ruta y entrega de forma que el transportista pueda operar con eficiencia y confianza en contexto de calle.
         </p>
@@ -320,7 +343,7 @@
       </div>
 
       <!-- Design Principles -->
-      <h3 class="sub-heading reveal">Principios de diseño</h3>
+      <h3 class="sub-heading reveal">Principios de diseño <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
       <div class="principles-strip">
         <div class="principle-card reveal stagger-1">
@@ -350,15 +373,6 @@
         </div>
       </div>
 
-      <!-- Solution Direction -->
-      <div class="direction-card reveal">
-        <div class="direction-card__badge">✓ Dirección elegida</div>
-        <h3 class="direction-card__title">Dirección A — "Copiloto de ruta"</h3>
-        <p class="direction-card__desc">
-          Rediseño centrado en la ruta como eje narrativo. La app se comporta como un copiloto: muestra la siguiente parada con toda la info necesaria, organiza por proximidad, y permite avanzar linealmente sin ir y volver entre pantallas. El patrón "siguiente parada" es familiar en apps de navegación, tiene baja curva de aprendizaje y es compatible con uso en contexto de calle.
-        </p>
-      </div>
-
     </div>
   </section>
 
@@ -377,7 +391,7 @@
       </div>
 
       <!-- Assumptions -->
-      <h3 class="sub-heading reveal">Supuestos críticos a validar</h3>
+      <h3 class="sub-heading reveal">Supuestos críticos a validar <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
 
       <div class="table-wrapper reveal">
         <table class="assumptions-table">
@@ -425,7 +439,7 @@
       </div>
 
       <!-- Benchmark -->
-      <h3 class="sub-heading reveal">Benchmark funcional</h3>
+      <h3 class="sub-heading reveal">Benchmark funcional <span class="source-tag source-tag--benchmark">Benchmark</span></h3>
 
       <div class="benchmark-grid">
         <div class="benchmark-card reveal stagger-1">
@@ -472,7 +486,7 @@
       </div>
 
       <!-- Heuristics -->
-      <h3 class="sub-heading reveal">Heurísticas UX aplicadas</h3>
+      <h3 class="sub-heading reveal">Heurísticas UX aplicadas <span class="source-tag source-tag--benchmark">Benchmark</span></h3>
 
       <div class="heuristics-strip reveal">
         <div class="heuristic-pill">
@@ -502,7 +516,7 @@
       </div>
 
       <!-- Pains & Gains -->
-      <h3 class="sub-heading reveal">Mapa de Pains y Gains</h3>
+      <h3 class="sub-heading reveal">Mapa de Pains y Gains <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
       <div class="pains-gains reveal">
         <div class="pains-gains__column">
@@ -563,7 +577,7 @@
       </div>
 
       <!-- Insights -->
-      <h3 class="sub-heading reveal">Insights del research</h3>
+      <h3 class="sub-heading reveal">Insights del research <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
       <div class="insights-grid">
         <div class="insight-card reveal stagger-1">
@@ -585,7 +599,7 @@
       </div>
 
       <!-- Priority Table -->
-      <h3 class="sub-heading reveal">Oportunidades priorizadas</h3>
+      <h3 class="sub-heading reveal">Oportunidades priorizadas <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
       <div class="table-wrapper reveal">
         <table class="priority-table">
@@ -636,13 +650,245 @@
 
 
   <!-- ════════════════════════════════════════
+       04 · SOLUCIÓN — COPILOTO DE RUTA
+       ════════════════════════════════════════ -->
+  <section id="solucion" class="section section--grey">
+    <div class="container">
+
+      <!-- Section intro -->
+      <div class="section-intro reveal">
+        <div class="section-intro__number">04 · Solución propuesta</div>
+        <h2 class="section-intro__title">Copiloto de ruta</h2>
+        <p class="section-intro__subtitle">Un copiloto que propone, informa y se adapta — respetando que el transportista sabe más sobre su territorio que cualquier algoritmo.</p>
+        <p class="section-notice">Esta es una propuesta de diseño basada en evidencia. Cada decisión necesita validación real con usuarios antes de implementarse.</p>
+      </div>
+
+      <!-- Hypothesis Banner -->
+      <div class="hypothesis-banner reveal">
+        <div class="hypothesis-banner__icon">⚠️</div>
+        <div class="hypothesis-banner__text">
+          <strong>Encuadre importante:</strong> Lo que sigue son hipótesis de diseño sustentadas en research secundario, benchmark y análisis heurístico. En un contexto real, cada decisión requeriría testeo con transportistas activos antes de llegar a producción. Por tratarse de un challenge, se presentan como propuesta fundamentada, no como solución validada.
+        </div>
+      </div>
+
+      <!-- Direction Card -->
+      <div class="direction-card reveal">
+        <div class="direction-card__badge">✓ Dirección elegida</div>
+        <h3 class="direction-card__title">Dirección A — "Copiloto de ruta" <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
+        <p class="direction-card__desc">
+          Rediseño centrado en la ruta como eje narrativo. La app se comporta como un copiloto: muestra la siguiente parada con toda la info necesaria, organiza por proximidad, y permite avanzar linealmente. El patrón "siguiente parada" es familiar en apps de navegación y tiene baja curva de aprendizaje.
+        </p>
+      </div>
+
+      <!-- Decisions -->
+      <h3 class="sub-heading reveal">5 decisiones concretas de diseño <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
+
+      <div class="decision-grid">
+        <div class="decision-card reveal stagger-1">
+          <div class="decision-card__icon">📋</div>
+          <div class="decision-card__title">Lista de paradas</div>
+          <div class="decision-card__desc">Orden por proximidad. Badge de paquetes y nombre del receptor visibles sin abrir nada. Drag & drop para reordenar.</div>
+        </div>
+        <div class="decision-card reveal stagger-2">
+          <div class="decision-card__icon">📍</div>
+          <div class="decision-card__title">Detalle de parada</div>
+          <div class="decision-card__desc">Dirección en 4 niveles jerárquicos (calle, número hero, piso/depto, entre calles). Mapa inline. Receptor prominente.</div>
+        </div>
+        <div class="decision-card reveal stagger-3">
+          <div class="decision-card__icon">📊</div>
+          <div class="decision-card__title">Progreso</div>
+          <div class="decision-card__desc">Barra "X de Y entregas" siempre visible. Badge por parada: pendiente, en camino, entregada. Sensación de control.</div>
+        </div>
+        <div class="decision-card reveal stagger-4">
+          <div class="decision-card__icon">📦</div>
+          <div class="decision-card__title">Paquetes</div>
+          <div class="decision-card__desc">Conteo por parada en la card. Preparar antes de llegar. Lista expandible con IDs en el detalle.</div>
+        </div>
+        <div class="decision-card reveal stagger-5">
+          <div class="decision-card__icon">🧭</div>
+          <div class="decision-card__title">Navegación</div>
+          <div class="decision-card__desc">Patrón "siguiente parada" con bottom sheet. CTA adaptativo: "Abrir en Maps" → "Llegué" al acercarse.</div>
+        </div>
+      </div>
+
+      <!-- Pain Resolution -->
+      <h3 class="sub-heading reveal">Cómo se resuelve cada pain point</h3>
+
+      <div class="pain-resolution">
+        <div class="pain-resolution__row reveal stagger-1">
+          <div class="pain-resolution__pain">No saber el orden óptimo</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Lista auto-ordenada por proximidad + banner "Ruta sugerida" con ahorro cuantificado</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Vista de ruta</div>
+        </div>
+        <div class="pain-resolution__row reveal stagger-2">
+          <div class="pain-resolution__pain">No encontrar nombre del receptor</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Nombre visible en la card de la lista + prominente en detalle con ícono de persona</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Lista + Detalle</div>
+        </div>
+        <div class="pain-resolution__row reveal stagger-3">
+          <div class="pain-resolution__pain">Ubicación exacta difícil</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Dirección en 4 niveles: calle + número XL + piso/depto tag + entre calles + mapa inline</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Detalle</div>
+        </div>
+        <div class="pain-resolution__row reveal stagger-4">
+          <div class="pain-resolution__pain">No saber cuántos paquetes</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Badge "📦 2" en cada card + sección "Paquetes en esta parada" en detalle</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Lista + Detalle</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       05 · IMPACTO ESPERADO
+       ════════════════════════════════════════ -->
+  <section id="impacto" class="section section--white">
+    <div class="container">
+
+      <!-- Section intro -->
+      <div class="section-intro reveal">
+        <div class="section-intro__number">05 · Impacto esperado</div>
+        <h2 class="section-intro__title">Métricas, validación y riesgos</h2>
+        <p class="section-intro__subtitle">Qué esperamos lograr y cómo lo validaríamos.</p>
+        <p class="section-notice">Estas métricas son proyecciones basadas en benchmark y análisis contextual. Requieren validación A/B en producción.</p>
+      </div>
+
+      <!-- KPI Hero -->
+      <div class="kpi-hero reveal reveal--scale">
+        <div class="kpi-hero__value">+4 pts</div>
+        <div class="kpi-hero__label">Recuperar NPS perdido <span class="source-tag source-tag--supuesto">Supuesto</span></div>
+        <div class="kpi-hero__sublabel">KPI primario — si la causa es arquitectura de información, el rediseño debería revertir la caída</div>
+      </div>
+
+      <!-- Impact Grid -->
+      <h3 class="sub-heading reveal">Métricas secundarias <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
+
+      <div class="impact-grid">
+        <div class="impact-card reveal stagger-1">
+          <div class="impact-card__value">–10/15%</div>
+          <div class="impact-card__label">Tiempo promedio por entrega</div>
+          <div class="impact-card__type">Operativa</div>
+        </div>
+        <div class="impact-card reveal stagger-2">
+          <div class="impact-card__value">–20%</div>
+          <div class="impact-card__label">Llamadas transportista → comprador</div>
+          <div class="impact-card__type">CX</div>
+        </div>
+        <div class="impact-card reveal stagger-3">
+          <div class="impact-card__value">+5-10%</div>
+          <div class="impact-card__label">Entregas completadas por día</div>
+          <div class="impact-card__type">Negocio</div>
+        </div>
+        <div class="impact-card reveal stagger-4">
+          <div class="impact-card__value">>90%</div>
+          <div class="impact-card__label">Task completion rate en test de usabilidad</div>
+          <div class="impact-card__type">UX</div>
+        </div>
+      </div>
+
+      <!-- Validation Plan -->
+      <h3 class="sub-heading reveal">Plan de validación</h3>
+
+      <div class="table-wrapper reveal">
+        <table class="validation-table">
+          <thead>
+            <tr>
+              <th>Fase</th>
+              <th>Método</th>
+              <th>Participantes</th>
+              <th>Qué valida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Test de usabilidad remoto (prototipo Figma)</td>
+              <td>5 transportistas Flex activos</td>
+              <td>¿Puede completar una entrega sin ayuda?</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Test de "primer vistazo" (5 seg)</td>
+              <td>8 transportistas</td>
+              <td>¿Qué info ven primero? ¿Es la correcta?</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Entrevista contextual (ride-along)</td>
+              <td>3 transportistas</td>
+              <td>Validar contexto de uso real (celular, mano, mirada)</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>A/B en producción (post-lanzamiento)</td>
+              <td>Grupo control vs. tratamiento</td>
+              <td>NPS, tiempo por entrega, tasa de llamadas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Risks -->
+      <h3 class="sub-heading reveal">Riesgos y mitigación</h3>
+
+      <div class="risk-grid">
+        <div class="risk-card reveal stagger-1">
+          <div class="risk-card__title">Resistencia al cambio</div>
+          <div class="risk-card__desc">Transportistas acostumbrados a la UI actual pueden rechazar el rediseño.</div>
+          <div class="risk-card__mitigation">✓ Mitigación: onboarding ligero (tooltip en primer uso) + no eliminar funcionalidades existentes</div>
+        </div>
+        <div class="risk-card reveal stagger-2">
+          <div class="risk-card__title">Orden de ruta no óptimo percibido</div>
+          <div class="risk-card__desc">Si el algoritmo propone un orden que no coincide con la intuición del transportista, pierde confianza.</div>
+          <div class="risk-card__mitigation">✓ Mitigación: permitir reordenar manualmente + mostrar "ordenado por cercanía"</div>
+        </div>
+        <div class="risk-card reveal stagger-3">
+          <div class="risk-card__title">Datos de dirección incompletos</div>
+          <div class="risk-card__desc">Si la dirección no tiene piso/depto, la jerarquía visual queda vacía.</div>
+          <div class="risk-card__mitigation">✓ Mitigación: graceful degradation — omitir niveles faltantes sin mostrar "N/A"</div>
+        </div>
+      </div>
+
+      <!-- Closing Block -->
+      <div class="closing-block reveal">
+        <div class="closing-block__grid">
+          <div>
+            <div class="closing-block__item-label">Qué cambió</div>
+            <div class="closing-block__item-text">De lista plana sin contexto a copiloto de ruta con información jerarquizada por momento de uso.</div>
+          </div>
+          <div>
+            <div class="closing-block__item-label">Por qué</div>
+            <div class="closing-block__item-text">4 pain points → 1 problema de arquitectura de información. La data existe, la experiencia no la entrega bien.</div>
+          </div>
+          <div>
+            <div class="closing-block__item-label">Cómo lo mediría</div>
+            <div class="closing-block__item-text">NPS (+4pts), tasa de llamadas (–20%), entregas/día (+10%), task completion (>90%).</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
        FOOTER
        ════════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
       <h3 class="site-footer__title">Matias Ferracani</h3>
       <p class="site-footer__text">matiasferracani@gmail.com · 11-3025-3007</p>
-      <p class="site-footer__text" style="margin-top: var(--space-lg); opacity: 0.4;">Las etapas de Validar y Lanzar serán incorporadas en la siguiente iteración de este case study.</p>
+      <p class="site-footer__text" style="margin-top: var(--space-lg); opacity: 0.4;">La siguiente iteración de este case incluiría las pantallas high-fi del flujo propuesto y los resultados de testeo con usuarios reales.</p>
       <div class="site-footer__badge">MELI UX Challenge · 2026</div>
     </div>
   </footer>
@@ -651,6 +897,7 @@
   <!-- Scripts -->
   <script src="js/motion.js"></script>
   <script src="js/nav.js"></script>
+
 
 </body>
 </html>
