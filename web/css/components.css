@@ -1519,19 +1519,25 @@
 /* ── Section Hypothesis Notice ── */
 .section-notice {
   font-size: var(--font-body-sm);
-  color: var(--text-placeholder);
-  font-style: italic;
-  margin-top: var(--space-sm);
-  display: flex;
+  color: var(--text-secondary);
+  font-style: normal;
+  font-weight: var(--weight-medium);
+  margin-top: var(--space-md);
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
+  background: rgba(255, 119, 51, 0.08);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 119, 51, 0.18);
 }
 
 .section-notice::before {
   content: '△';
   font-style: normal;
   color: var(--feedback-warning);
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: var(--weight-bold);
 }
 
 /* ── Bullet List (for exec summary / solution) ── */
