@@ -1633,10 +1633,15 @@
 
 .screen-gallery--wireframes {
   grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
 }
 
 .screen-gallery--highfi {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .screen-gallery__item {
@@ -1653,6 +1658,17 @@
 }
 
 .screen-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screen-gallery__img-wrap {
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.screen-gallery__img {
   width: 100%;
   height: auto;
   display: block;
