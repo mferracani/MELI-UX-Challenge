@@ -105,6 +105,18 @@
     display: none;
   }
 
+  /* Design section tablet */
+  .screen-gallery--wireframes,
+  .screen-gallery--highfi {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .figma-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-xl);
+  }
+
   .closing-block__grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -306,6 +318,32 @@
   .insight-card__text {
     font-size: var(--font-body-lg);
     line-height: var(--lh-body-lg);
+  }
+
+  /* Design section mobile */
+  .screen-gallery--wireframes,
+  .screen-gallery--highfi {
+    grid-template-columns: 1fr;
+  }
+
+  .screen-placeholder {
+    min-height: 180px;
+  }
+
+  .figma-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .figma-cta__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .figma-cta__icon svg {
+    width: 36px;
+    height: 36px;
   }
 
   /* Reduce stagger on mobile */

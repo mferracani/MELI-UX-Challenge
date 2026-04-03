@@ -10,7 +10,7 @@
   const routeNav   = document.getElementById('route-nav');
   const lineFill   = document.getElementById('route-line-fill');
   const nodes      = document.querySelectorAll('.route-nav__node[data-section]');
-  const sections   = ['hero', 'brief', 'problema', 'investigar', 'solucion', 'impacto'];
+  const sections   = ['hero', 'brief', 'problema', 'investigar', 'solucion', 'diseno', 'impacto'];
 
   let activeIndex  = 0;
 
@@ -81,6 +81,27 @@
     });
   }
 
+  // ── Hide nav when footer is visible ──
+  function initFooterHide() {
+    const footer = document.querySelector('.site-footer');
+    if (!footer || !routeNav) return;
+
+    const footerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            routeNav.classList.add('is-hidden');
+          } else {
+            routeNav.classList.remove('is-hidden');
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+
+    footerObserver.observe(footer);
+  }
+
   // ── Init ──
   function init() {
     if (!routeNav) return;
@@ -88,6 +109,7 @@
     setActive(0);
     initSectionTracking();
     initSmoothScroll();
+    initFooterHide();
   }
 
   if (document.readyState === 'loading') {

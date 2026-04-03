@@ -57,9 +57,14 @@
       <span class="route-nav__label">04 · Solución</span>
     </a>
 
+    <a class="route-nav__node" href="#diseno" data-section="diseno">
+      <div class="route-nav__dot"></div>
+      <span class="route-nav__label">05 · Diseño</span>
+    </a>
+
     <a class="route-nav__node" href="#impacto" data-section="impacto">
       <div class="route-nav__dot"></div>
-      <span class="route-nav__label">05 · Impacto</span>
+      <span class="route-nav__label">06 · Impacto</span>
     </a>
   </nav>
 
@@ -750,14 +755,178 @@
 
 
   <!-- ════════════════════════════════════════
-       05 · IMPACTO ESPERADO
+       05 · DISEÑO DE LA SOLUCIÓN
+       ════════════════════════════════════════ -->
+  <section id="diseno" class="section section--grey">
+    <div class="container">
+
+      <!-- Section intro -->
+      <div class="section-intro reveal">
+        <div class="section-intro__number">05 · Diseño de la solución</div>
+        <h2 class="section-intro__title">Del concepto a las pantallas</h2>
+        <p class="section-intro__subtitle">User flow, wireframes y prototipo en alta definición — todo lo que necesitás para entender cómo funciona la propuesta.</p>
+      </div>
+
+
+      <!-- ── A: User Flow ── -->
+      <h3 class="sub-heading reveal">El flujo completo</h3>
+      <p class="section-text reveal">
+        El sistema se articula como un <strong>HUB + paradas</strong>. La pantalla P1 (Vista de ruta) es el centro de operaciones: el transportista siempre vuelve ahí después de cada acción. Esto simplifica la navegación y da sensación de control.
+      </p>
+
+      <div class="flow-image reveal">
+        <div class="flow-image__scroll">
+          <img src="img/user-flow.png" alt="User Flow — Ruta Flex: Copiloto de entregas" class="flow-image__img">
+        </div>
+        <div class="flow-image__caption">Diagrama del user flow completo — desde inicio de jornada hasta ruta completada</div>
+      </div>
+
+
+      <div class="section-divider"></div>
+
+
+      <!-- ── B: Wireframes ── -->
+      <h3 class="sub-heading reveal">Wireframes — Exploración en baja definición</h3>
+      <p class="section-text reveal">
+        Antes de definir el look visual, se exploró la estructura y jerarquía de información de cada pantalla. Estos wireframes validaron las decisiones de arquitectura antes de invertir en detalle.
+      </p>
+
+      <div class="screen-gallery screen-gallery--wireframes">
+        <div class="screen-gallery__item reveal stagger-1">
+          <div class="screen-placeholder screen-placeholder--small">
+            <div class="screen-placeholder__icon">📋</div>
+            <div class="screen-placeholder__text">P0 · Inicio de jornada</div>
+          </div>
+          <div class="screen-gallery__label">P0 — Inicio de jornada</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-2">
+          <div class="screen-placeholder screen-placeholder--small">
+            <div class="screen-placeholder__icon">📋</div>
+            <div class="screen-placeholder__text">P1 · Vista de ruta</div>
+          </div>
+          <div class="screen-gallery__label">P1 — Vista de ruta (HUB)</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-3">
+          <div class="screen-placeholder screen-placeholder--small">
+            <div class="screen-placeholder__icon">📋</div>
+            <div class="screen-placeholder__text">P2 · Detalle de parada</div>
+          </div>
+          <div class="screen-gallery__label">P2 — Detalle de parada</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-4">
+          <div class="screen-placeholder screen-placeholder--small">
+            <div class="screen-placeholder__icon">📋</div>
+            <div class="screen-placeholder__text">P3 · En camino</div>
+          </div>
+          <div class="screen-gallery__label">P3 — En camino</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-5">
+          <div class="screen-placeholder screen-placeholder--small">
+            <div class="screen-placeholder__icon">📋</div>
+            <div class="screen-placeholder__text">P1b · Reorganizar</div>
+          </div>
+          <div class="screen-gallery__label">P1b — Reorganizar ruta</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-6">
+          <div class="screen-placeholder screen-placeholder--small">
+            <div class="screen-placeholder__icon">📋</div>
+            <div class="screen-placeholder__text">P7 · Ruta completada</div>
+          </div>
+          <div class="screen-gallery__label">P7 — Ruta completada</div>
+        </div>
+      </div>
+
+
+      <div class="section-divider"></div>
+
+
+      <!-- ── C: High-Fi ── -->
+      <h3 class="sub-heading reveal">Pantallas en alta definición <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
+      <p class="section-text reveal">
+        Las 5 pantallas prioritarias diseñadas en el sistema visual de Mercado Libre. Resuelven los pain points identificados en la investigación y demuestran el thinking de flujo completo.
+      </p>
+
+      <div class="screen-gallery screen-gallery--highfi">
+        <div class="screen-gallery__item reveal stagger-1">
+          <div class="screen-placeholder">
+            <div class="screen-placeholder__icon">📱</div>
+            <div class="screen-placeholder__text">P1 · Vista de ruta (High-Fi)</div>
+          </div>
+          <div class="screen-gallery__label">P1 — Vista de ruta</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-2">
+          <div class="screen-placeholder">
+            <div class="screen-placeholder__icon">📱</div>
+            <div class="screen-placeholder__text">P2 · Detalle de parada (High-Fi)</div>
+          </div>
+          <div class="screen-gallery__label">P2 — Detalle de parada</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-3">
+          <div class="screen-placeholder">
+            <div class="screen-placeholder__icon">📱</div>
+            <div class="screen-placeholder__text">P3 · En camino (High-Fi)</div>
+          </div>
+          <div class="screen-gallery__label">P3 — En camino</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-4">
+          <div class="screen-placeholder">
+            <div class="screen-placeholder__icon">📱</div>
+            <div class="screen-placeholder__text">P1b · Reorganizar (High-Fi)</div>
+          </div>
+          <div class="screen-gallery__label">P1b — Reorganizar ruta</div>
+        </div>
+        <div class="screen-gallery__item reveal stagger-5">
+          <div class="screen-placeholder">
+            <div class="screen-placeholder__icon">📱</div>
+            <div class="screen-placeholder__text">P6 · Quick Actions (High-Fi)</div>
+          </div>
+          <div class="screen-gallery__label">P6 — Quick Actions</div>
+        </div>
+      </div>
+
+
+      <div class="section-divider"></div>
+
+
+      <!-- ── D: Figma CTA ── -->
+      <div class="figma-cta reveal">
+        <div class="figma-cta__icon">
+          <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+            <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+            <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+            <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+            <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+          </svg>
+        </div>
+        <div class="figma-cta__content">
+          <div class="figma-cta__title">Explorá el prototipo en Figma</div>
+          <div class="figma-cta__desc">Navegá el flujo completo e interactuá con las pantallas diseñadas en alta definición.</div>
+        </div>
+        <a href="#" target="_blank" rel="noopener" class="figma-cta__button">
+          Abrir en Figma
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 3H3V13H13V10M9 3H13M13 3V7M13 3L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ════════════════════════════════════════
+       06 · IMPACTO ESPERADO
        ════════════════════════════════════════ -->
   <section id="impacto" class="section section--white">
     <div class="container">
 
       <!-- Section intro -->
       <div class="section-intro reveal">
-        <div class="section-intro__number">05 · Impacto esperado</div>
+        <div class="section-intro__number">06 · Impacto esperado</div>
         <h2 class="section-intro__title">Métricas, validación y riesgos</h2>
         <p class="section-intro__subtitle">Qué esperamos lograr y cómo lo validaríamos.</p>
         <p class="section-notice">Estas métricas son proyecciones basadas en benchmark y análisis contextual. Requieren validación A/B en producción.</p>
@@ -880,7 +1049,6 @@
     </div>
   </section>
 
-
   <!-- ════════════════════════════════════════
        FOOTER
        ════════════════════════════════════════ -->
@@ -888,8 +1056,9 @@
     <div class="container">
       <h3 class="site-footer__title">Matias Ferracani</h3>
       <p class="site-footer__text">matiasferracani@gmail.com · 11-3025-3007</p>
-      <p class="site-footer__text" style="margin-top: var(--space-lg); opacity: 0.4;">La siguiente iteración de este case incluiría las pantallas high-fi del flujo propuesto y los resultados de testeo con usuarios reales.</p>
-      <div class="site-footer__badge">MELI UX Challenge · 2026</div>
+      <p class="site-footer__text">
+        <a href="https://www.linkedin.com/in/matias-ferracani" target="_blank" rel="noopener" class="site-footer__link">linkedin.com/in/matias-ferracani ↗</a>
+      </p>
     </div>
   </footer>
 

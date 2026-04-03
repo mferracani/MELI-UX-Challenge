@@ -15,6 +15,13 @@
   align-items: flex-start;
   gap: 0;
   padding: 4px 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.route-nav.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-20px);
 }
 
 /* Vertical track line */
@@ -1021,6 +1028,18 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.site-footer__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-footer__link:hover {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+
 .site-footer__badge {
   display: inline-flex;
   align-items: center;
@@ -1562,4 +1581,223 @@
   left: 0;
   color: var(--brand-secondary);
   font-weight: var(--weight-semibold);
+}
+
+/* ══════════════════════════════════════
+   06 · DISEÑO DE LA SOLUCIÓN
+   ══════════════════════════════════════ */
+
+/* ── Flow Image (User Flow full-width) ── */
+.flow-image {
+  width: 100%;
+  margin-top: var(--space-xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.flow-image__scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--space-lg);
+}
+
+.flow-image__img {
+  display: block;
+  min-width: 900px;
+  width: 100%;
+  height: auto;
+}
+
+.flow-image__caption {
+  font-size: var(--font-body-sm);
+  color: var(--text-secondary);
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--surface-card);
+}
+
+/* ── Screen Gallery (grid de pantallas) ── */
+.screen-gallery {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.screen-gallery--flow {
+  grid-template-columns: 1fr;
+}
+
+.screen-gallery--wireframes {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.screen-gallery--highfi {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.screen-gallery__item {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screen-gallery__item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.screen-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.screen-gallery__label {
+  font-size: var(--font-body-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--surface-bg);
+}
+
+/* ── Screen Placeholder (estado vacío) ── */
+.screen-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  border: 2px dashed var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--surface-bg);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.screen-placeholder:hover {
+  border-color: var(--brand-secondary);
+}
+
+.screen-placeholder__icon {
+  font-size: 40px;
+  margin-bottom: var(--space-md);
+  opacity: 0.4;
+}
+
+.screen-placeholder__text {
+  font-size: var(--font-body-sm);
+  color: var(--text-placeholder);
+  font-weight: var(--weight-medium);
+}
+
+.screen-placeholder--small {
+  min-height: 200px;
+}
+
+.screen-placeholder--small .screen-placeholder__icon {
+  font-size: 28px;
+}
+
+/* ── Figma CTA Card ── */
+.figma-cta {
+  margin-top: var(--space-xl);
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg) 16px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.figma-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(162,89,255,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.figma-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+}
+
+.figma-cta__icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figma-cta__icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.figma-cta__content {
+  flex: 1;
+}
+
+.figma-cta__title {
+  font-size: var(--font-h3);
+  font-weight: var(--weight-bold);
+  color: #ffffff;
+  margin-bottom: var(--space-xs);
+}
+
+.figma-cta__desc {
+  font-size: var(--font-body);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+.figma-cta__button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: #ffffff;
+  color: #1e1e2e;
+  font-size: var(--font-body);
+  font-weight: var(--weight-semibold);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.figma-cta__button:hover {
+  background: #f0f0f0;
+  transform: scale(1.04);
+}
+
+.figma-cta__button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Section Divider (between sub-blocks) ── */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--border-subtle);
+  margin: var(--space-xxl) 0;
 }
