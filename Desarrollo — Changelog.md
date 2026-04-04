@@ -19,6 +19,25 @@ created: 2026-04-02
 
 ## Historial de commits
 
+### `978e947` — feat: v2 iteration — product thinking depth upgrade
+- **Fecha:** 2026-04-04
+- **Rama:** `feature/v2-iteration` → mergeado a `main`
+- **Cambios:**
+  - ✅ **Contexto Operativo** — Reemplazo de la persona tradicional por una tarjeta de contexto con constraints reales del repartidor: vehículo, dispositivo, atención, manos libres
+  - ✅ **Supuestos Críticos** — Tabla expandida a 6 columnas: Supuesto, Certeza, Fuente, Validación, Riesgo y "Si falla, qué cambia"
+  - ✅ **Sección 06 · Alcance** — Nueva sección explícita de qué queda fuera y por qué, con tarjetas scope + insight card de criterio de recorte
+  - ✅ **Solución sin drag & drop** — Reemplazado por acciones rápidas "Llevar primero / Hacer después" con callout de trade-off fundamentado
+  - ✅ **Diseño Resiliente** — Tarjetas if/else para estados con y sin backend/GPS
+  - ✅ **Edge Cases** — Grid comparativo "Hoy (inferido)" vs "Con copiloto"
+  - ✅ **Impacto con hipótesis causales** — KPI hero + framework de hipótesis con métricas proxy y lógica causal
+  - ✅ **Wireframes v2** — Reemplazadas las 5 pantallas de baja definición por nuevas imágenes; eliminado P3 (En camino) sin imagen disponible
+  - ✅ **User Flow actualizado** — Nueva imagen del diagrama completo
+  - ✅ **Ajustes de copy** — Eliminados guiones del medio (em dash) para escritura más humana; callout duplicado eliminado; textos a ancho completo del layout
+  - ✅ **Navegación** — `nav.js` actualizado para trackear la nueva sección Alcance
+- **Archivos:** `web/index.html`, `web/css/components.css`, `web/css/responsive.css`, `web/js/nav.js`, `web/img/user-flow.png`, `web/img/wireframes v2/` (5 pantallas)
+
+---
+
 ### `7cb21dc` — feat: reorder sections, footer LinkedIn, user flow real, texto a ancho completo
 - **Fecha:** 2026-04-03
 - **Rama:** `main`
@@ -108,7 +127,9 @@ MELI/
 ## Próximos pasos
 
 - [x] **User Flow** — Imagen del diagrama integrada en la sección Diseño
-- [ ] **Pantallas wireframes** — Reemplazar placeholders de wireframes en baja definición
-- [ ] **Pantallas high-fi** — Insertar las 4-5 pantallas clave del flujo propuesto
+- [x] **Pantallas wireframes v2** — Reemplazadas las 5 pantallas de baja definición
+- [x] **Pantallas high-fi** — Insertas las pantallas P1 y P2 en alta definición
+- [x] **v2 iteration** — Contexto operativo, supuestos, alcance, diseño resiliente, edge cases, hipótesis de impacto
+- [ ] **Wireframe P3 (En camino)** — Agregar imagen a `wireframes v2/` cuando esté lista
 - [ ] **Link a Figma** — Actualizar el `href` del botón "Abrir en Figma" con el link real al prototipo
 - [ ] **Testing** — Documentar resultados de tests de usabilidad (si aplica)
