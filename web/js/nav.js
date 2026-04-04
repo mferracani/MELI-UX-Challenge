@@ -10,7 +10,7 @@
   const routeNav   = document.getElementById('route-nav');
   const lineFill   = document.getElementById('route-line-fill');
   const nodes      = document.querySelectorAll('.route-nav__node[data-section]');
-  const sections   = ['hero', 'brief', 'problema', 'investigar', 'solucion', 'diseno', 'impacto'];
+  const sections   = ['hero', 'brief', 'problema', 'investigar', 'solucion', 'diseno', 'alcance', 'impacto'];
 
   let activeIndex  = 0;
 

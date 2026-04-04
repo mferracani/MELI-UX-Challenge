@@ -134,6 +134,28 @@
   .route-nav__node.is-active .route-nav__label {
     display: none;
   }
+
+  /* v2 new components tablet */
+  .context-card__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hypothesis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .edge-case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resilient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scope-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
 }
 
 /* ── Mobile (< 768px) ── */
@@ -354,6 +376,32 @@
   .stagger-5 { transition-delay: 150ms; }
   .stagger-6 { transition-delay: 180ms; }
   .stagger-7 { transition-delay: 210ms; }
+
+  /* v2 new components mobile */
+  .context-card__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hypothesis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edge-case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edge-case-card__columns {
+    grid-template-columns: 1fr;
+  }
+
+  .resilient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scope-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
 }
 
 /* ── Small Mobile (< 400px) ── */

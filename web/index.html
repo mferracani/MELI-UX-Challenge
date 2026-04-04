@@ -62,9 +62,14 @@
       <span class="route-nav__label">05 · Diseño</span>
     </a>
 
+    <a class="route-nav__node" href="#alcance" data-section="alcance">
+      <div class="route-nav__dot"></div>
+      <span class="route-nav__label">06 · Alcance</span>
+    </a>
+
     <a class="route-nav__node" href="#impacto" data-section="impacto">
       <div class="route-nav__dot"></div>
-      <span class="route-nav__label">06 · Impacto</span>
+      <span class="route-nav__label">07 · Impacto</span>
     </a>
   </nav>
 
@@ -125,7 +130,7 @@
         <div class="exec-summary__grid">
           <div class="exec-summary__item">
             <div class="exec-summary__item-label">Señal</div>
-            <div class="exec-summary__item-value">NPS cayó <strong>4%</strong> — la causa es información mal jerarquizada en la app de ruta</div>
+            <div class="exec-summary__item-value">NPS cayó <strong>4%</strong> — hipótesis: la causa es información mal jerarquizada en la app de ruta</div>
           </div>
           <div class="exec-summary__item">
             <div class="exec-summary__item-label">Propuesta</div>
@@ -133,7 +138,7 @@
           </div>
           <div class="exec-summary__item">
             <div class="exec-summary__item-label">Impacto esperado</div>
-            <div class="exec-summary__item-value">Recuperar NPS, <strong>–20% llamadas</strong> al comprador, +10% entregas/día</div>
+            <div class="exec-summary__item-value">Hipótesis: reducir llamadas <strong>–30%</strong>, tiempo por entrega <strong>–55%</strong>, +5-10% entregas/día</div>
           </div>
           <div class="exec-summary__item">
             <div class="exec-summary__item-label">Mi rol</div>
@@ -293,37 +298,59 @@
         </p>
       </div>
 
-      <!-- Persona -->
-      <h3 class="sub-heading reveal">Usuario y contexto de uso <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
+      <!-- Contexto operativo (replaces Persona) -->
+      <h3 class="sub-heading reveal">Contexto operativo <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
 
-      <div class="persona-card reveal">
-        <div class="persona-card__image">
-          <img src="assets/persona-marcos.png" alt="Ilustración de Marcos, transportista Flex" width="180" height="180">
+      <div class="context-card reveal">
+        <div class="context-card__header">
+          <span class="context-card__label">Constraints de diseño — cómo opera el transportista Flex</span>
         </div>
-        <div>
-          <div class="persona-card__name">Marcos, 29 años</div>
-          <div class="persona-card__role">Transportista Flex en AMBA</div>
-          <div class="persona-card__details">
-            <div class="persona-card__detail">
-              <span class="persona-card__detail-label">Entregas</span>
-              15 a 25 por jornada
-            </div>
-            <div class="persona-card__detail">
-              <span class="persona-card__detail-label">Vehículo</span>
-              Moto con soporte de celular
-            </div>
-            <div class="persona-card__detail">
-              <span class="persona-card__detail-label">Dispositivo</span>
-              Android gama media, 6.1"
-            </div>
-            <div class="persona-card__detail">
-              <span class="persona-card__detail-label">Zonas</span>
-              Alterna entre conocidas y nuevas
+        <div class="context-card__grid">
+          <div class="context-card__item">
+            <span class="context-card__icon">🏍️</span>
+            <div class="context-card__item-content">
+              <span class="context-card__item-label">Vehículo</span>
+              <span class="context-card__item-value">Moto con soporte de celular</span>
             </div>
           </div>
-          <div class="persona-card__frustration">
-            <strong>Principal frustración:</strong> perder tiempo buscando datos que deberían estar visibles. Su objetivo es completar más entregas en menos tiempo.
+          <div class="context-card__item">
+            <span class="context-card__icon">📱</span>
+            <div class="context-card__item-content">
+              <span class="context-card__item-label">Dispositivo</span>
+              <span class="context-card__item-value">Android gama media, 6.1"</span>
+            </div>
           </div>
+          <div class="context-card__item">
+            <span class="context-card__icon">✋</span>
+            <div class="context-card__item-content">
+              <span class="context-card__item-label">Manos</span>
+              <span class="context-card__item-value">Una mano libre</span>
+            </div>
+          </div>
+          <div class="context-card__item">
+            <span class="context-card__icon">👁️</span>
+            <div class="context-card__item-content">
+              <span class="context-card__item-label">Atención</span>
+              <span class="context-card__item-value">2-3 seg de mirada a pantalla</span>
+            </div>
+          </div>
+          <div class="context-card__item">
+            <span class="context-card__icon">📦</span>
+            <div class="context-card__item-content">
+              <span class="context-card__item-label">Entregas</span>
+              <span class="context-card__item-value">15 a 25 por jornada</span>
+            </div>
+          </div>
+          <div class="context-card__item">
+            <span class="context-card__icon">🗺️</span>
+            <div class="context-card__item-content">
+              <span class="context-card__item-label">Zonas</span>
+              <span class="context-card__item-value">Alterna entre conocidas y nuevas</span>
+            </div>
+          </div>
+        </div>
+        <div class="context-card__quote">
+          <strong>Frustración clave:</strong> "Pierdo tiempo buscando datos que deberían estar visibles. Quiero completar más entregas en menos tiempo."
         </div>
       </div>
 
@@ -395,8 +422,8 @@
         <p class="section-intro__subtitle">Fundamentar cada decisión con datos, patrones validados y análisis del ecosistema.</p>
       </div>
 
-      <!-- Assumptions -->
-      <h3 class="sub-heading reveal">Supuestos críticos a validar <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
+      <!-- Assumptions with certainty -->
+      <h3 class="sub-heading reveal">Supuestos críticos — con nivel de certeza <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
 
       <div class="table-wrapper reveal">
         <table class="assumptions-table">
@@ -405,7 +432,9 @@
               <th>#</th>
               <th>Supuesto</th>
               <th>Tipo</th>
-              <th>Riesgo si falla</th>
+              <th>Certeza</th>
+              <th>Fuente</th>
+              <th>Si falla, qué cambia</th>
             </tr>
           </thead>
           <tbody>
@@ -413,31 +442,41 @@
               <td>S1</td>
               <td>Los transportistas prefieren un orden sugerido por proximidad vs. elegir su propio orden</td>
               <td>Comportamiento</td>
-              <td>Si prefieren control total, el auto-sort genera rechazo</td>
+              <td>Media</td>
+              <td>Brief (1 quote de Carlos)</td>
+              <td>Si prefieren control total, el default cambia: "tu orden" es el principal, sugerencia es secundaria</td>
             </tr>
             <tr>
               <td>S2</td>
               <td>El nombre del receptor es dato que la app ya tiene disponible por envío</td>
               <td>Dato técnico</td>
+              <td>Alta</td>
+              <td>Inferencia: MELI procesa compras, tiene estos datos</td>
               <td>Si no está, la feature no se puede implementar</td>
             </tr>
             <tr>
               <td>S3</td>
-              <td>La dirección enriquecida (piso/depto/entre calles) existe como dato estructurado</td>
+              <td>La dirección viene como dato estructurado (calle, número, piso, depto)</td>
               <td>Dato técnico</td>
-              <td>Si es texto libre, la jerarquía visual se complica</td>
+              <td>Baja</td>
+              <td>Inferencia del wireframe — no confirmable</td>
+              <td>La jerarquía de 4 niveles se degrada a texto plano con parsing. Diseño con fallback incluido</td>
             </tr>
             <tr>
               <td>S4</td>
-              <td>Los transportistas manejan entre 10-30 entregas por jornada</td>
-              <td>Contexto</td>
-              <td>Si es mucho más, la UI de lista necesita paginación/filtros</td>
+              <td>El algoritmo de proximidad existe en el backend</td>
+              <td>Técnico</td>
+              <td>Desconocida</td>
+              <td>No hay dato en el brief</td>
+              <td>Sin algoritmo, la app ordena por geolocalización del dispositivo (sort simple, no ruteo)</td>
             </tr>
             <tr>
               <td>S5</td>
-              <td>El transportista usa el celular montado en el vehículo</td>
-              <td>Contexto de uso</td>
-              <td>Afecta tamaño de UI y modo de interacción</td>
+              <td>Los transportistas manejan entre 10-30 entregas por jornada</td>
+              <td>Contexto</td>
+              <td>Alta</td>
+              <td>Brief + benchmark industry</td>
+              <td>Si es mucho más, la UI de lista necesita paginación/filtros</td>
             </tr>
           </tbody>
         </table>
@@ -665,14 +704,13 @@
         <div class="section-intro__number">04 · Solución propuesta</div>
         <h2 class="section-intro__title">Copiloto de ruta</h2>
         <p class="section-intro__subtitle">Un copiloto que propone, informa y se adapta — respetando que el transportista sabe más sobre su territorio que cualquier algoritmo.</p>
-        <p class="section-notice">Esta es una propuesta de diseño basada en evidencia. Cada decisión necesita validación real con usuarios antes de implementarse.</p>
       </div>
 
       <!-- Hypothesis Banner -->
       <div class="hypothesis-banner reveal">
         <div class="hypothesis-banner__icon">⚠️</div>
         <div class="hypothesis-banner__text">
-          <strong>Encuadre importante:</strong> Lo que sigue son hipótesis de diseño sustentadas en research secundario, benchmark y análisis heurístico. En un contexto real, cada decisión requeriría testeo con transportistas activos antes de llegar a producción. Por tratarse de un challenge, se presentan como propuesta fundamentada, no como solución validada.
+          <strong>Encuadre:</strong> Propuesta fundamentada en research secundario y benchmarks. Cada decisión requeriría validación real con transportistas antes de producción.
         </div>
       </div>
 
@@ -692,7 +730,7 @@
         <div class="decision-card reveal stagger-1">
           <div class="decision-card__icon">📋</div>
           <div class="decision-card__title">Lista de paradas</div>
-          <div class="decision-card__desc">Orden por proximidad. Badge de paquetes y nombre del receptor visibles sin abrir nada. Drag & drop para reordenar.</div>
+          <div class="decision-card__desc">Orden por proximidad. Badge de paquetes y nombre del receptor visibles sin abrir nada. Acciones rápidas: "Llevar primero" y "Hacer después".</div>
         </div>
         <div class="decision-card reveal stagger-2">
           <div class="decision-card__icon">📍</div>
@@ -712,8 +750,13 @@
         <div class="decision-card reveal stagger-5">
           <div class="decision-card__icon">🧭</div>
           <div class="decision-card__title">Navegación</div>
-          <div class="decision-card__desc">Patrón "siguiente parada" con bottom sheet. CTA adaptativo: "Abrir en Maps" → "Llegué" al acercarse.</div>
+          <div class="decision-card__desc">Patrón "siguiente parada" con bottom sheet. CTA adaptativo: "Abrir en Maps" → "Llegué" al acercarse. "Llegué" siempre disponible como acción manual.</div>
         </div>
+      </div>
+
+      <!-- Trade-off: por qué no drag & drop -->
+      <div class="decision-tradeoff reveal">
+        <strong>¿Por qué no drag & drop para reordenar?</strong> Porque requiere precisión motora sostenida incompatible con el contexto de calle: una mano, guantes, movimiento. Las dos acciones rápidas ("Llevar primero" / "Hacer después") cubren el 80% de los casos de reorden con un tap. El drag & drop queda para v2, condicionado a validación en campo.
       </div>
 
       <!-- Pain Resolution -->
@@ -750,6 +793,47 @@
         </div>
       </div>
 
+      <!-- Diseño resiliente: con y sin backend -->
+      <h3 class="sub-heading reveal">Diseño resiliente: cómo funciona con y sin backend</h3>
+      <p class="section-text reveal">
+        Cada decisión de diseño tiene un fallback para funcionar incluso cuando las condiciones técnicas no son ideales. Esto demuestra pensamiento de producto real.
+      </p>
+
+      <div class="resilient-grid">
+        <div class="resilient-card reveal stagger-1">
+          <div class="resilient-card__title">
+            <span class="resilient-card__title-icon">🗺️</span>
+            Ruta sugerida
+          </div>
+          <div class="resilient-card__branches">
+            <div class="resilient-card__branch resilient-card__branch--if">
+              <span class="resilient-card__branch-label">Si hay algoritmo</span>
+              La app muestra "Ruta sugerida · Ahorrás ~38 min" con optimización real de ruteo.
+            </div>
+            <div class="resilient-card__branch resilient-card__branch--else">
+              <span class="resilient-card__branch-label">Sin algoritmo</span>
+              Las paradas se muestran en el orden asignado, con opción "Ordenar por cercanía" que usa geolocalización del dispositivo para un sort simple (distancia en línea recta, no ruteo).
+            </div>
+          </div>
+        </div>
+        <div class="resilient-card reveal stagger-2">
+          <div class="resilient-card__title">
+            <span class="resilient-card__title-icon">📍</span>
+            CTA "Llegué" y GPS
+          </div>
+          <div class="resilient-card__branches">
+            <div class="resilient-card__branch resilient-card__branch--if">
+              <span class="resilient-card__branch-label">GPS preciso</span>
+              El botón "Llegué" aparece automáticamente al detectar distancia &lt;200m. Experiencia adaptativa sin intervención del usuario.
+            </div>
+            <div class="resilient-card__branch resilient-card__branch--else">
+              <span class="resilient-card__branch-label">GPS impreciso</span>
+              "Llegué" siempre disponible como acción manual (botón secundario). Banner sutil: "Tu ubicación puede no ser precisa". El GPS adaptativo es un plus, no un gate.
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -776,7 +860,7 @@
 
       <div class="flow-image reveal">
         <div class="flow-image__scroll">
-          <img src="img/user-flow.png" alt="User Flow — Ruta Flex: Copiloto de entregas" class="flow-image__img">
+          <img src="img/user-flow.png?v=2" alt="User Flow — Ruta Flex: Copiloto de entregas" class="flow-image__img">
         </div>
         <div class="flow-image__caption">Diagrama del user flow completo — desde inicio de jornada hasta ruta completada</div>
       </div>
@@ -794,37 +878,31 @@
       <div class="screen-gallery screen-gallery--wireframes">
         <div class="screen-gallery__item reveal stagger-1">
           <div class="screen-gallery__img-wrap">
-            <img src="img/wireframe-p0-inicio.png" alt="Wireframe P0 — Inicio de jornada" class="screen-gallery__img">
+            <img src="img/wireframes v2/P0 · Inicio de jornada.png" alt="Wireframe P0 — Inicio de jornada" class="screen-gallery__img">
           </div>
           <div class="screen-gallery__label">P0 — Inicio de jornada</div>
         </div>
         <div class="screen-gallery__item reveal stagger-2">
           <div class="screen-gallery__img-wrap">
-            <img src="img/wireframe-p1-vista-ruta.png" alt="Wireframe P1 — Vista de ruta (HUB)" class="screen-gallery__img">
+            <img src="img/wireframes v2/P1 · Vista de ruta.png" alt="Wireframe P1 — Vista de ruta (HUB)" class="screen-gallery__img">
           </div>
           <div class="screen-gallery__label">P1 — Vista de ruta (HUB)</div>
         </div>
         <div class="screen-gallery__item reveal stagger-3">
           <div class="screen-gallery__img-wrap">
-            <img src="img/wireframe-p3-detalle-parada.png" alt="Wireframe P2 — Detalle de parada" class="screen-gallery__img">
+            <img src="img/wireframes v2/P2 · Detalle de parada.png" alt="Wireframe P2 — Detalle de parada" class="screen-gallery__img">
           </div>
           <div class="screen-gallery__label">P2 — Detalle de parada</div>
         </div>
         <div class="screen-gallery__item reveal stagger-4">
           <div class="screen-gallery__img-wrap">
-            <img src="img/wireframe-p4-en-camino.png" alt="Wireframe P3 — En camino" class="screen-gallery__img">
-          </div>
-          <div class="screen-gallery__label">P3 — En camino</div>
-        </div>
-        <div class="screen-gallery__item reveal stagger-5">
-          <div class="screen-gallery__img-wrap">
-            <img src="img/wireframe-p2-confirmar-entrega.png" alt="Wireframe P4 — Confirmar entrega" class="screen-gallery__img">
+            <img src="img/wireframes v2/P4 · Confirmar entrega.png" alt="Wireframe P4 — Confirmar entrega" class="screen-gallery__img">
           </div>
           <div class="screen-gallery__label">P4 — Confirmar entrega</div>
         </div>
-        <div class="screen-gallery__item reveal stagger-6">
+        <div class="screen-gallery__item reveal stagger-5">
           <div class="screen-gallery__img-wrap">
-            <img src="img/wireframe-p5-jornada-completada.png" alt="Wireframe P5 — Jornada completada" class="screen-gallery__img">
+            <img src="img/wireframes v2/P5 · Jornada completada.png" alt="Wireframe P5 — Jornada completada" class="screen-gallery__img">
           </div>
           <div class="screen-gallery__label">P5 — Jornada completada</div>
         </div>
@@ -859,7 +937,84 @@
       <div class="section-divider"></div>
 
 
-      <!-- ── D: Figma CTA ── -->
+      <!-- ── D: Edge Cases — Diseño para la fricción ── -->
+      <h3 class="sub-heading reveal">Diseño para la fricción — cuando el happy path falla</h3>
+      <p class="section-text reveal">
+        Un diseño que solo funciona en condiciones ideales no sirve para transportistas en la calle. Estos son los escenarios reales que la propuesta contempla.
+      </p>
+
+      <div class="edge-case-grid">
+        <div class="edge-case-card reveal stagger-1">
+          <div class="edge-case-card__title">
+            <span class="edge-case-card__title-icon">🏠</span>
+            Dirección sin numeración visible
+          </div>
+          <div class="edge-case-card__columns">
+            <div class="edge-case-card__col edge-case-card__col--before">
+              <span class="edge-case-card__col-label">Hoy (inferido)</span>
+              El transportista no encuentra la casa, pierde tiempo buscando y termina llamando al comprador.
+            </div>
+            <div class="edge-case-card__col edge-case-card__col--after">
+              <span class="edge-case-card__col-label">Con copiloto</span>
+              P2 muestra la nota del comprador prominente ("Casa azul frente a la plaza"). Si no hay nota, sugiere "¿Necesitás contactar al comprador?" con CTA directo.
+            </div>
+          </div>
+        </div>
+        <div class="edge-case-card reveal stagger-2">
+          <div class="edge-case-card__title">
+            <span class="edge-case-card__title-icon">📡</span>
+            Sin señal / modo offline
+          </div>
+          <div class="edge-case-card__columns">
+            <div class="edge-case-card__col edge-case-card__col--before">
+              <span class="edge-case-card__col-label">Hoy (inferido)</span>
+              La app no carga. El transportista queda sin información sobre sus paradas y no puede registrar entregas.
+            </div>
+            <div class="edge-case-card__col edge-case-card__col--after">
+              <span class="edge-case-card__col-label">Con copiloto</span>
+              La ruta se cachea al inicio de la jornada. En offline, opera con datos locales y sincroniza al volver. Banner: "Sin conexión — trabajando con tu última ruta".
+            </div>
+          </div>
+        </div>
+        <div class="edge-case-card reveal stagger-3">
+          <div class="edge-case-card__title">
+            <span class="edge-case-card__title-icon">🚪</span>
+            Comprador ausente, no contesta
+          </div>
+          <div class="edge-case-card__columns">
+            <div class="edge-case-card__col edge-case-card__col--before">
+              <span class="edge-case-card__col-label">Hoy (inferido)</span>
+              El transportista espera sin referencia de tiempo, o se va sin registrar. Pierde tiempo y no hay feedback.
+            </div>
+            <div class="edge-case-card__col edge-case-card__col--after">
+              <span class="edge-case-card__col-label">Con copiloto</span>
+              Timer de espera visible: "Esperando hace 3 min". Después de 5 min, sugiere: "¿No hay nadie? Podés reportar el problema o dejar en lugar seguro".
+            </div>
+          </div>
+        </div>
+        <div class="edge-case-card reveal stagger-4">
+          <div class="edge-case-card__title">
+            <span class="edge-case-card__title-icon">🏢</span>
+            Edificio sin portero, comprador en piso alto
+          </div>
+          <div class="edge-case-card__columns">
+            <div class="edge-case-card__col edge-case-card__col--before">
+              <span class="edge-case-card__col-label">Hoy (inferido)</span>
+              El transportista no sabe cómo acceder. Busca instrucciones que están colapsadas en "Datos comprador".
+            </div>
+            <div class="edge-case-card__col edge-case-card__col--after">
+              <span class="edge-case-card__col-label">Con copiloto</span>
+              Si hay instrucciones de acceso ("Timbre 3B, esperar"), se muestran prominentes en P2. Si no hay, CTA "Llamar" sigue siendo el fallback principal.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section-divider"></div>
+
+
+      <!-- ── E: Figma CTA ── -->
       <div class="figma-cta reveal">
         <div class="figma-cta__icon">
           <svg viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -886,54 +1041,142 @@
   </section>
 
 
-
-
-
   <!-- ════════════════════════════════════════
-       06 · IMPACTO ESPERADO
+       06 · ALCANCE — FUERA DE SCOPE
        ════════════════════════════════════════ -->
-  <section id="impacto" class="section section--white">
+  <section id="alcance" class="section section--white">
     <div class="container">
 
       <!-- Section intro -->
       <div class="section-intro reveal">
-        <div class="section-intro__number">06 · Impacto esperado</div>
-        <h2 class="section-intro__title">Métricas, validación y riesgos</h2>
-        <p class="section-intro__subtitle">Qué esperamos lograr y cómo lo validaríamos.</p>
-        <p class="section-notice">Estas métricas son proyecciones basadas en benchmark y análisis contextual. Requieren validación A/B en producción.</p>
+        <div class="section-intro__number">06 · Alcance</div>
+        <h2 class="section-intro__title">Qué resuelvo y qué no</h2>
+        <p class="section-intro__subtitle">Un buen recorte comunica madurez de producto. Estas son las decisiones activas sobre qué dejé fuera y por qué.</p>
+      </div>
+
+      <div class="scope-grid">
+        <div class="scope-item reveal stagger-1">
+          <div class="scope-item__what">Optimización algorítmica real de rutas</div>
+          <div class="scope-item__why">Requiere backend de ruteo que no puedo confirmar que existe. Mi propuesta funciona con o sin él, diseño con fallback incluido.</div>
+        </div>
+        <div class="scope-item reveal stagger-2">
+          <div class="scope-item__what">Disponibilidad y estructura de datos de dirección</div>
+          <div class="scope-item__why">Es una dependencia de datos, no de diseño. Diseño para el caso ideal (4 niveles) y para el degradado (texto plano con parsing).</div>
+        </div>
+        <div class="scope-item reveal stagger-3">
+          <div class="scope-item__what">Integración con sistema de Maps (routing en vivo)</div>
+          <div class="scope-item__why">Complejidad técnica alta, lo dejo para v3. El MVP resuelve con deep link a Google Maps/Waze: solución probada y sin dependencias internas.</div>
+        </div>
+        <div class="scope-item reveal stagger-4">
+          <div class="scope-item__what">Chat con comprador</div>
+          <div class="scope-item__why">Requiere integración con mensajería. En el MVP el contacto se resuelve con "Llamar", que es directo y no genera fricción extra.</div>
+        </div>
+        <div class="scope-item reveal stagger-5">
+          <div class="scope-item__what">Excepciones logísticas (devoluciones, paquetes dañados, reagendamiento)</div>
+          <div class="scope-item__why">Flujos que requieren research operativo profundo. El MVP cubre entrega exitosa + "no pude entregar" como punto de partida.</div>
+        </div>
+        <div class="scope-item reveal stagger-6">
+          <div class="scope-item__what">Métricas reales (solo propongo un framework)</div>
+          <div class="scope-item__why">No tengo acceso a datos de producción. Planteo hipótesis con baseline estimado, no promesas. El framework está diseñado para ser validable.</div>
+        </div>
+      </div>
+
+      <div class="insight-card reveal" style="margin-top: var(--space-xl);">
+        <div class="insight-card__label">Criterio de recorte</div>
+        <p class="insight-card__text">
+          Elegí resolver lo que tiene impacto directo en la experiencia del transportista y es implementable sin dependencias externas confirmadas. Lo que dejé fuera tiene un "por qué" explícito y un lugar en el roadmap.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ════════════════════════════════════════
+       07 · IMPACTO ESPERADO
+       ════════════════════════════════════════ -->
+  <section id="impacto" class="section section--grey">
+    <div class="container">
+
+      <!-- Section intro -->
+      <div class="section-intro reveal">
+        <div class="section-intro__number">07 · Impacto esperado</div>
+        <h2 class="section-intro__title">Hipótesis de impacto, no promesas</h2>
+        <p class="section-intro__subtitle">Cada métrica es una hipótesis con lógica causal que explica por qué debería moverse.</p>
+        <p class="section-notice">Estas métricas son hipótesis basadas en benchmark y análisis contextual. Los baselines son estimados y requieren validación en producción.</p>
       </div>
 
       <!-- KPI Hero -->
       <div class="kpi-hero reveal reveal--scale">
-        <div class="kpi-hero__value">+4 pts</div>
-        <div class="kpi-hero__label">Recuperar NPS perdido <span class="source-tag source-tag--supuesto">Supuesto</span></div>
-        <div class="kpi-hero__sublabel">KPI primario — si la causa es arquitectura de información, el rediseño debería revertir la caída</div>
+        <div class="kpi-hero__value">+2-4 pts</div>
+        <div class="kpi-hero__label">Recuperar NPS perdido <span class="source-tag source-tag--supuesto">Hipótesis</span></div>
+        <div class="kpi-hero__sublabel">KPI norte — si la causa es arquitectura de información, el rediseño debería revertir parcialmente la caída. Las métricas proxy son la evidencia real.</div>
       </div>
 
-      <!-- Impact Grid -->
-      <h3 class="sub-heading reveal">Métricas secundarias <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
+      <!-- Hypothesis Grid -->
+      <h3 class="sub-heading reveal">Framework de medición <span class="source-tag source-tag--supuesto">Hipótesis</span></h3>
 
-      <div class="impact-grid">
-        <div class="impact-card reveal stagger-1">
-          <div class="impact-card__value">–10/15%</div>
-          <div class="impact-card__label">Tiempo promedio por entrega</div>
-          <div class="impact-card__type">Operativa</div>
+      <div class="hypothesis-grid">
+        <div class="hypothesis-card reveal stagger-1">
+          <div class="hypothesis-card__tag hypothesis-card__tag--operativa">Operativa</div>
+          <div class="hypothesis-card__metric">
+            <span class="hypothesis-card__value">~20s</span>
+            <span class="hypothesis-card__baseline">baseline: ~45s (estimado)</span>
+          </div>
+          <div class="hypothesis-card__name">Tiempo entre abrir detalle y confirmar entrega</div>
+          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Reducir de ~45s a ~20s</div>
+          <div class="hypothesis-card__reason"><strong>Por qué debería moverse:</strong> Si la info está visible sin buscar (nombre, dirección, paquetes), el tiempo de resolución baja. Hoy incluye buscar datos colapsados.</div>
         </div>
-        <div class="impact-card reveal stagger-2">
-          <div class="impact-card__value">–20%</div>
-          <div class="impact-card__label">Llamadas transportista → comprador</div>
-          <div class="impact-card__type">CX</div>
+        <div class="hypothesis-card reveal stagger-2">
+          <div class="hypothesis-card__tag hypothesis-card__tag--cx">CX</div>
+          <div class="hypothesis-card__metric">
+            <span class="hypothesis-card__value">–30%+</span>
+            <span class="hypothesis-card__baseline">baseline: alta (inferida)</span>
+          </div>
+          <div class="hypothesis-card__name">Tasa de uso del botón "Llamar" por parada</div>
+          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Reducir 30%+ las llamadas al comprador</div>
+          <div class="hypothesis-card__reason"><strong>Por qué debería moverse:</strong> Si la dirección se entiende de un vistazo (4 niveles + mapa inline), el transportista no necesita llamar para confirmar ubicación.</div>
         </div>
-        <div class="impact-card reveal stagger-3">
-          <div class="impact-card__value">+5-10%</div>
-          <div class="impact-card__label">Entregas completadas por día</div>
-          <div class="impact-card__type">Negocio</div>
+        <div class="hypothesis-card reveal stagger-3">
+          <div class="hypothesis-card__tag hypothesis-card__tag--ux">UX</div>
+          <div class="hypothesis-card__metric">
+            <span class="hypothesis-card__value">→ 0</span>
+            <span class="hypothesis-card__baseline">baseline: alta (dato colapsado)</span>
+          </div>
+          <div class="hypothesis-card__name">Tasa de tap en "Datos comprador" (UI actual)</div>
+          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Desaparece como interacción necesaria</div>
+          <div class="hypothesis-card__reason"><strong>Por qué debería moverse:</strong> Si el dato del receptor ya es visible en la card y en el detalle, nadie lo busca detrás de un chevron. Esta métrica proxy aísla el problema de AI.</div>
         </div>
-        <div class="impact-card reveal stagger-4">
-          <div class="impact-card__value">>90%</div>
-          <div class="impact-card__label">Task completion rate en test de usabilidad</div>
-          <div class="impact-card__type">UX</div>
+        <div class="hypothesis-card reveal stagger-4">
+          <div class="hypothesis-card__tag hypothesis-card__tag--negocio">Negocio</div>
+          <div class="hypothesis-card__metric">
+            <span class="hypothesis-card__value">+5-10%</span>
+            <span class="hypothesis-card__baseline">baseline: ~20/día (brief)</span>
+          </div>
+          <div class="hypothesis-card__name">Entregas completadas por día por transportista</div>
+          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Aumento de 5-10% sobre baseline</div>
+          <div class="hypothesis-card__reason"><strong>Por qué debería moverse:</strong> Menos tiempo buscando info + menos llamadas + ruta optimizada = más entregas completadas por jornada. Es efecto cascada de las otras métricas.</div>
         </div>
+        <div class="hypothesis-card reveal stagger-5">
+          <div class="hypothesis-card__tag hypothesis-card__tag--norte">KPI norte</div>
+          <div class="hypothesis-card__metric">
+            <span class="hypothesis-card__value">+2-4 pts</span>
+            <span class="hypothesis-card__baseline">baseline: –4 pts (brief)</span>
+          </div>
+          <div class="hypothesis-card__name">NPS de la app</div>
+          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Recuperar 2-4 puntos en 8 semanas</div>
+          <div class="hypothesis-card__reason"><strong>Por qué debería moverse:</strong> El NPS cayó por insatisfacción con la app. Si las 3 métricas proxy mejoran, eso prueba que el problema era de AI y el NPS debería recuperarse parcialmente.</div>
+        </div>
+      </div>
+
+      <div class="insight-card reveal" style="margin-top: var(--space-xl);">
+        <div class="insight-card__label">Lógica de validación</div>
+        <p class="insight-card__text">
+          Las 3 primeras métricas son las que prueban que el problema era de arquitectura de información. El NPS es el norte, pero las proxy son la evidencia. Si las proxy se mueven y el NPS no, el problema es otro.
+        </p>
       </div>
 
       <!-- Validation Plan -->
@@ -1011,8 +1254,8 @@
             <div class="closing-block__item-text">4 pain points → 1 problema de arquitectura de información. La data existe, la experiencia no la entrega bien.</div>
           </div>
           <div>
-            <div class="closing-block__item-label">Cómo lo mediría</div>
-            <div class="closing-block__item-text">NPS (+4pts), tasa de llamadas (–20%), entregas/día (+10%), task completion (>90%).</div>
+            <div class="closing-block__item-label">Framework de validación</div>
+            <div class="closing-block__item-text">3 métricas proxy (tiempo, llamadas, taps) que aislan el problema de AI + NPS como norte. Si las proxy se mueven y el NPS no, el problema es otro.</div>
           </div>
         </div>
       </div>
