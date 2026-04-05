@@ -1026,8 +1026,8 @@
           </svg>
         </div>
         <div class="figma-cta__content">
-          <div class="figma-cta__title">Explorá el prototipo en Figma</div>
-          <div class="figma-cta__desc">Navegá el flujo completo e interactuá con las pantallas diseñadas en alta definición.</div>
+          <div class="figma-cta__title">Explorar el flujo en Figma</div>
+          <div class="figma-cta__desc">Recorrí las pantallas del flujo propuesto y el detalle del diseño.</div>
         </div>
         <a href="https://www.figma.com/design/O480eRYW6nFKKymeblIv0y/MELI?node-id=39-905&t=mb6lZLZ9COFzi14v-1" target="_blank" rel="noopener" class="figma-cta__button">
           Abrir en Figma
@@ -1276,10 +1276,20 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button id="lightbox__close" class="lightbox__close" aria-label="Cerrar">&times;</button>
+    <div class="lightbox__inner">
+      <img id="lightbox__img" class="lightbox__img" src="" alt="">
+      <div id="lightbox__label" class="lightbox__label"></div>
+    </div>
+  </div>
+
 
   <!-- Scripts -->
   <script src="js/motion.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/lightbox.js"></script>
 
 
 </body>
