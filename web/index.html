@@ -89,7 +89,7 @@
         </h1>
 
         <p class="hero__subtitle hero-reveal hero-reveal--subtitle">
-          Rediseñando la experiencia de ruta en Envíos Flex para que el transportista opere con eficiencia y confianza en contexto de calle.
+          Rediseñando la experiencia de ruta en Envíos Flex para que un transportista con una mano libre y 2 segundos de mirada pueda hacer su trabajo sin buscar información.
         </p>
 
         <div class="metrics-row hero-reveal hero-reveal--metrics">
@@ -138,7 +138,7 @@
           </div>
           <div class="exec-summary__item">
             <div class="exec-summary__item-label">Impacto esperado</div>
-            <div class="exec-summary__item-value">Hipótesis: reducir llamadas <strong>–30%</strong>, tiempo por entrega <strong>–55%</strong>, +5-10% entregas/día</div>
+            <div class="exec-summary__item-value">Hipótesis: reducir llamadas al comprador <strong>–30%</strong>, tiempo por entrega de <strong>~45s a ~20s</strong>, +5-10% entregas/día. Requiere validación en producción.</div>
           </div>
           <div class="exec-summary__item">
             <div class="exec-summary__item-label">Mi rol</div>
@@ -160,7 +160,7 @@
       <div class="section-intro reveal">
         <div class="section-intro__number">01 · Brief</div>
         <h2 class="section-intro__title">El punto de partida</h2>
-        <p class="section-intro__subtitle">Un producto real, usuarios reales y una señal clara de que algo necesita mejorar.</p>
+        <p class="section-intro__subtitle">Un NPS que cae y cuatro transportistas que dicen lo mismo: la información está, pero cuesta encontrarla.</p>
       </div>
 
       <!-- Context -->
@@ -203,7 +203,7 @@
             <div class="quote-block__avatar">C</div>
             <div>
               <div class="quote-block__name">Carlos, 32 años</div>
-              <div class="quote-block__meta">Necesita eficiencia operativa</div>
+              <div class="quote-block__meta">La app podría ordenar por proximidad, pero no lo hace</div>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@
             <div class="quote-block__avatar">C</div>
             <div>
               <div class="quote-block__name">Claudia, 45 años</div>
-              <div class="quote-block__meta">Necesita visibilidad del dato</div>
+              <div class="quote-block__meta">El nombre del receptor existe, pero está colapsado</div>
             </div>
           </div>
         </div>
@@ -227,7 +227,7 @@
             <div class="quote-block__avatar">P</div>
             <div>
               <div class="quote-block__name">Pablo, 24 años</div>
-              <div class="quote-block__meta">Fricción de ubicación</div>
+              <div class="quote-block__meta">La dirección llega sin jerarquía visual</div>
             </div>
           </div>
         </div>
@@ -239,7 +239,7 @@
             <div class="quote-block__avatar">T</div>
             <div>
               <div class="quote-block__name">Teresa, 58 años</div>
-              <div class="quote-block__meta">Necesita anticipación</div>
+              <div class="quote-block__meta">No se muestra la cantidad de paquetes por parada</div>
             </div>
           </div>
         </div>
@@ -266,8 +266,8 @@
       <!-- Section intro -->
       <div class="section-intro reveal">
         <div class="section-intro__number">02 · Definición del problema</div>
-        <h2 class="section-intro__title">De la señal al problema formulado</h2>
-        <p class="section-intro__subtitle">Entender qué está fallando antes de proponer cómo resolverlo.</p>
+        <h2 class="section-intro__title">Cuatro dolores, un solo problema</h2>
+        <p class="section-intro__subtitle">Los cuatro dolores que reportan los transportistas son, en el fondo, un solo problema de arquitectura de información.</p>
       </div>
 
       <!-- Experience Audit -->
@@ -303,7 +303,7 @@
 
       <div class="context-card reveal">
         <div class="context-card__header">
-          <span class="context-card__label">Constraints de diseño — cómo opera el transportista Flex</span>
+          <span class="context-card__label">Constraints de diseño: cómo opera el transportista Flex</span>
         </div>
         <div class="context-card__grid">
           <div class="context-card__item">
@@ -419,11 +419,11 @@
       <div class="section-intro reveal">
         <div class="section-intro__number">03 · Investigar</div>
         <h2 class="section-intro__title">Evidencia, benchmark y hallazgos</h2>
-        <p class="section-intro__subtitle">Fundamentar cada decisión con datos, patrones validados y análisis del ecosistema.</p>
+        <p class="section-intro__subtitle">Qué pude confirmar, qué tuve que asumir y qué patrones del mercado validan la dirección.</p>
       </div>
 
       <!-- Assumptions with certainty -->
-      <h3 class="sub-heading reveal">Supuestos críticos — con nivel de certeza <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
+      <h3 class="sub-heading reveal">Supuestos críticos, con nivel de certeza <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
 
       <div class="table-wrapper reveal">
         <table class="assumptions-table">
@@ -626,11 +626,11 @@
       <div class="insights-grid">
         <div class="insight-card reveal stagger-1">
           <div class="insight-card__label">Insight 1</div>
-          <p class="insight-card__text">Los 4 pain points no son problemas independientes — son síntomas de un problema de arquitectura de información.</p>
+          <p class="insight-card__text">Los 4 pain points no son problemas independientes. Son síntomas de un problema de arquitectura de información.</p>
         </div>
         <div class="insight-card reveal stagger-2">
           <div class="insight-card__label">Insight 2</div>
-          <p class="insight-card__text">El contexto de uso exige un diseño que funcione como "glanceable UI" — si no se entiende en 2-3 segundos, falla.</p>
+          <p class="insight-card__text">El contexto de uso exige un diseño que funcione como "glanceable UI": si no se entiende en 2-3 segundos, falla.</p>
         </div>
         <div class="insight-card reveal stagger-3">
           <div class="insight-card__label">Insight 3</div>
@@ -638,7 +638,7 @@
         </div>
         <div class="insight-card reveal stagger-4">
           <div class="insight-card__label">Insight 4</div>
-          <p class="insight-card__text">No hay progreso visible en el wireframe actual. El transportista no sabe "llevo 8 de 20" — eso genera incertidumbre sobre su jornada.</p>
+          <p class="insight-card__text">No hay progreso visible en el wireframe actual. El transportista no sabe "llevo 8 de 20" y eso genera incertidumbre sobre su jornada.</p>
         </div>
       </div>
 
@@ -694,6 +694,27 @@
 
 
   <!-- ════════════════════════════════════════
+       PUENTE NARRATIVO — De la investigación a la solución
+       ════════════════════════════════════════ -->
+  <section class="section section--white" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
+    <div class="container">
+      <div class="insight-card reveal" style="max-width: 800px; margin: 0 auto;">
+        <div class="insight-card__label">De la investigación a la solución</div>
+        <p class="insight-card__text">
+          Los cuatro dolores que reportan los transportistas comparten una misma raíz: la información ya está en la app, pero no se entrega con la jerarquía adecuada ni en el momento operativo correcto. No es un problema de features faltantes. Es un problema de arquitectura de información.
+        </p>
+        <p class="insight-card__text" style="margin-top: var(--space-sm);">
+          Esa lectura define la dirección de la solución: no agregar funcionalidades nuevas, sino reorganizar las existentes para que cada dato aparezca cuando el transportista lo necesita, visible de un vistazo, sin buscar.
+        </p>
+        <p class="insight-card__text" style="margin-top: var(--space-sm);">
+          Eso se traduce en 5 decisiones concretas de diseño.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
        04 · SOLUCIÓN — COPILOTO DE RUTA
        ════════════════════════════════════════ -->
   <section id="solucion" class="section section--grey">
@@ -703,7 +724,7 @@
       <div class="section-intro reveal">
         <div class="section-intro__number">04 · Solución propuesta</div>
         <h2 class="section-intro__title">Copiloto de ruta</h2>
-        <p class="section-intro__subtitle">Un copiloto que propone, informa y se adapta — respetando que el transportista sabe más sobre su territorio que cualquier algoritmo.</p>
+        <p class="section-intro__subtitle">Un copiloto que propone, informa y se adapta. Porque el transportista sabe más sobre su territorio que cualquier algoritmo.</p>
       </div>
 
       <!-- Hypothesis Banner -->
@@ -717,7 +738,7 @@
       <!-- Direction Card -->
       <div class="direction-card reveal">
         <div class="direction-card__badge">✓ Dirección elegida</div>
-        <h3 class="direction-card__title">Dirección A — "Copiloto de ruta" <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
+        <h3 class="direction-card__title">Dirección elegida: "Copiloto de ruta" <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
         <p class="direction-card__desc">
           Rediseño centrado en la ruta como eje narrativo. La app se comporta como un copiloto: muestra la siguiente parada con toda la info necesaria, organiza por proximidad, y permite avanzar linealmente. El patrón "siguiente parada" es familiar en apps de navegación y tiene baja curva de aprendizaje.
         </p>
@@ -791,12 +812,53 @@
           <div class="pain-resolution__arrow">→</div>
           <div class="pain-resolution__screen">Lista + Detalle</div>
         </div>
+        <div class="pain-resolution__row reveal stagger-5">
+          <div class="pain-resolution__pain">Sin visibilidad de progreso</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Barra "X de Y entregas" siempre visible + badge de estado por parada (pendiente, en camino, entregada)</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Vista de ruta</div>
+        </div>
+      </div>
+
+      <!-- HMW respondidos -->
+      <h3 class="sub-heading reveal">Los HMW, respondidos</h3>
+
+      <div class="pain-resolution">
+        <div class="pain-resolution__row reveal stagger-1">
+          <div class="pain-resolution__pain">¿Cómo darle la info en cada momento?</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Modelo de copiloto: cada pantalla muestra solo lo que el transportista necesita en esa etapa (inicio → ruta → parada → entrega → cierre)</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Todo el flujo</div>
+        </div>
+        <div class="pain-resolution__row reveal stagger-2">
+          <div class="pain-resolution__pain">¿Cómo construir confianza en el orden?</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Banner "Ruta sugerida" con tiempo ahorrado + posibilidad de reordenar con acciones rápidas</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Vista de ruta</div>
+        </div>
+        <div class="pain-resolution__row reveal stagger-3">
+          <div class="pain-resolution__pain">¿Cómo hacer visible el nombre del receptor?</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Nombre visible en la card de la lista (sin abrir) + prominente en detalle con ícono de persona</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Lista + Detalle</div>
+        </div>
+        <div class="pain-resolution__row reveal stagger-4">
+          <div class="pain-resolution__pain">¿Cómo hacer la dirección legible de un vistazo?</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__decision">Dirección en 4 niveles jerárquicos: calle + número XL + piso/depto tag + entre calles como referencia</div>
+          <div class="pain-resolution__arrow">→</div>
+          <div class="pain-resolution__screen">Detalle</div>
+        </div>
       </div>
 
       <!-- Diseño resiliente: con y sin backend -->
       <h3 class="sub-heading reveal">Diseño resiliente: cómo funciona con y sin backend</h3>
       <p class="section-text reveal">
-        Cada decisión de diseño tiene un fallback para funcionar incluso cuando las condiciones técnicas no son ideales. Esto demuestra pensamiento de producto real.
+        Cada decisión tiene un fallback para funcionar cuando las condiciones técnicas no son las ideales.
       </p>
 
       <div class="resilient-grid">
@@ -848,7 +910,7 @@
       <div class="section-intro reveal">
         <div class="section-intro__number">05 · Diseño de la solución</div>
         <h2 class="section-intro__title">Del concepto a las pantallas</h2>
-        <p class="section-intro__subtitle">User flow, wireframes y prototipo en alta definición — todo lo que necesitás para entender cómo funciona la propuesta.</p>
+        <p class="section-intro__subtitle">Cómo se traduce cada decisión en estructura, jerarquía y pantallas concretas.</p>
       </div>
 
 
@@ -872,7 +934,7 @@
       <!-- ── B: Wireframes ── -->
       <h3 class="sub-heading reveal">Wireframes: Exploración en baja definición</h3>
       <p class="section-text reveal">
-        Antes de definir el look visual, se exploró la estructura y jerarquía de información de cada pantalla. Estos wireframes validaron las decisiones de arquitectura antes de invertir en detalle.
+        Antes de definir el look visual, exploré la estructura y jerarquía de cada pantalla en baja definición. El objetivo era validar que la arquitectura de información funcionara antes de invertir en detalle visual.
       </p>
 
       <div class="screen-gallery screen-gallery--wireframes">
@@ -915,7 +977,7 @@
       <!-- ── C: High-Fi ── -->
       <h3 class="sub-heading reveal">Pantallas en alta definición <span class="source-tag source-tag--supuesto">Supuesto</span></h3>
       <p class="section-text reveal">
-        Las pantallas clave diseñadas en el sistema visual de Mercado Libre. Resuelven los pain points identificados en la investigación y demuestran el thinking de flujo completo.
+        Las dos pantallas más críticas del flujo, diseñadas sobre el sistema visual de Mercado Libre. Resuelven directamente los pain points identificados en la investigación.
       </p>
 
       <div class="screen-gallery screen-gallery--highfi">
@@ -1113,7 +1175,7 @@
       <div class="kpi-hero reveal reveal--scale">
         <div class="kpi-hero__value">+2-4 pts</div>
         <div class="kpi-hero__label">Recuperar NPS perdido <span class="source-tag source-tag--supuesto">Hipótesis</span></div>
-        <div class="kpi-hero__sublabel">KPI norte — si la causa es arquitectura de información, el rediseño debería revertir parcialmente la caída. Las métricas proxy son la evidencia real.</div>
+        <div class="kpi-hero__sublabel">KPI norte. Si la causa es arquitectura de información, el rediseño debería revertir parcialmente la caída. Las métricas proxy son la evidencia real.</div>
       </div>
 
       <!-- Hypothesis Grid -->
@@ -1238,7 +1300,7 @@
         <div class="risk-card reveal stagger-3">
           <div class="risk-card__title">Datos de dirección incompletos</div>
           <div class="risk-card__desc">Si la dirección no tiene piso/depto, la jerarquía visual queda vacía.</div>
-          <div class="risk-card__mitigation">✓ Mitigación: graceful degradation — omitir niveles faltantes sin mostrar "N/A"</div>
+          <div class="risk-card__mitigation">✓ Mitigación: graceful degradation, omitir niveles faltantes sin mostrar "N/A"</div>
         </div>
       </div>
 
