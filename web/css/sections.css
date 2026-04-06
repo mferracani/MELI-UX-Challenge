@@ -108,6 +108,7 @@
 
 #investigar {
   background: var(--surface-card);
+  padding-bottom: var(--space-xl);
 }
 
 /* ── Section spacing refinement ── */

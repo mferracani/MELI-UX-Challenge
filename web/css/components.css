@@ -188,7 +188,6 @@
   line-height: var(--lh-heading-lg);
   font-weight: var(--weight-regular);
   color: var(--text-secondary);
-  max-width: 800px;
 }
 
 /* ── Content Block ── */
@@ -1374,7 +1373,7 @@
 
 .kpi-hero__sublabel {
   font-size: var(--font-body-md);
-  color: var(--text-placeholder);
+  color: var(--text-secondary);
   margin-top: var(--space-xs);
   max-width: 640px;
   margin-left: auto;

@@ -120,35 +120,6 @@
   </section>
 
 
-  <!-- ════════════════════════════════════════
-       EXECUTIVE SUMMARY
-       ════════════════════════════════════════ -->
-  <section class="section section--white" style="padding-top: var(--space-2xl); padding-bottom: var(--space-xl);">
-    <div class="container">
-      <div class="exec-summary reveal">
-        <div class="exec-summary__label">Resumen ejecutivo</div>
-        <div class="exec-summary__grid">
-          <div class="exec-summary__item">
-            <div class="exec-summary__item-label">Señal</div>
-            <div class="exec-summary__item-value">NPS cayó <strong>4%</strong> (hipótesis: la causa es información mal jerarquizada en la app de ruta)</div>
-          </div>
-          <div class="exec-summary__item">
-            <div class="exec-summary__item-label">Propuesta</div>
-            <div class="exec-summary__item-value"><strong>Copiloto de ruta:</strong> rediseño centrado en 5 decisiones de diseño concretas</div>
-          </div>
-          <div class="exec-summary__item">
-            <div class="exec-summary__item-label">Impacto esperado</div>
-            <div class="exec-summary__item-value">Hipótesis: reducir llamadas al comprador <strong>–30%</strong>, tiempo por entrega de <strong>~45s a ~20s</strong>, +5-10% entregas/día. Requiere validación en producción.</div>
-          </div>
-          <div class="exec-summary__item">
-            <div class="exec-summary__item-label">Mi rol</div>
-            <div class="exec-summary__item-value">Research, definición de problema, diseño de interacción, prototipado</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ════════════════════════════════════════
        01 · BRIEF
@@ -292,11 +263,6 @@
         </div>
       </div>
 
-      <div class="content-block content-block--full reveal">
-        <p>
-          La conclusión es consistente: <strong>la información existe, pero hoy está escondida, comprimida o mal priorizada.</strong>
-        </p>
-      </div>
 
       <!-- Contexto operativo (replaces Persona) -->
       <h3 class="sub-heading reveal">Contexto operativo <span class="source-tag source-tag--inferencia">Inferencia</span></h3>
@@ -630,7 +596,7 @@
         </div>
         <div class="insight-card reveal stagger-2">
           <div class="insight-card__label">Insight 2</div>
-          <p class="insight-card__text">El contexto de uso exige un diseño que funcione como "glanceable UI": si no se entiende en 2-3 segundos, falla.</p>
+          <p class="insight-card__text">Interfaz entendible de un vistazo (2–3 segundos)</p>
         </div>
         <div class="insight-card reveal stagger-3">
           <div class="insight-card__label">Insight 3</div>
@@ -696,18 +662,15 @@
   <!-- ════════════════════════════════════════
        PUENTE NARRATIVO — De la investigación a la solución
        ════════════════════════════════════════ -->
-  <section class="section section--white" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
+  <section class="section section--white" style="padding-top: var(--space-md); padding-bottom: var(--space-xl);">
     <div class="container">
       <div class="insight-card reveal">
         <div class="insight-card__label">De la investigación a la solución</div>
         <p class="insight-card__text">
-          Los cuatro dolores que reportan los transportistas comparten una misma raíz: la información ya está en la app, pero no se entrega con la jerarquía adecuada ni en el momento operativo correcto. No es un problema de features faltantes. Es un problema de arquitectura de información.
+          Los cuatro dolores comparten una raíz: la información ya existe en la app, pero no se entrega con la jerarquía ni en el momento correcto. No faltan features. Falla la arquitectura de información.
         </p>
         <p class="insight-card__text" style="margin-top: var(--space-sm);">
-          Esa lectura define la dirección de la solución: no agregar funcionalidades nuevas, sino reorganizar las existentes para que cada dato aparezca cuando el transportista lo necesita, visible de un vistazo, sin buscar.
-        </p>
-        <p class="insight-card__text" style="margin-top: var(--space-sm);">
-          Eso se traduce en 5 decisiones concretas de diseño.
+          La dirección es reorganizar, no agregar. Eso se traduce en 5 decisiones concretas de diseño.
         </p>
       </div>
     </div>
@@ -775,10 +738,6 @@
         </div>
       </div>
 
-      <!-- Trade-off: por qué no drag & drop -->
-      <div class="decision-tradeoff reveal">
-        <strong>¿Por qué no drag & drop para reordenar?</strong> Porque requiere precisión motora sostenida incompatible con el contexto de calle: una mano, guantes, movimiento. Las dos acciones rápidas ("Llevar primero" / "Hacer después") cubren el 80% de los casos de reorden con un tap. El drag & drop queda para v2, condicionado a validación en campo.
-      </div>
 
       <!-- Pain Resolution -->
       <h3 class="sub-heading reveal">Cómo se resuelve cada pain point</h3>
@@ -1118,8 +1077,8 @@
       <!-- Section intro -->
       <div class="section-intro reveal">
         <div class="section-intro__number">06 · Alcance</div>
-        <h2 class="section-intro__title">Qué resuelvo y qué no</h2>
-        <p class="section-intro__subtitle">Un buen recorte comunica madurez de producto. Estas son las decisiones activas sobre qué dejé fuera y por qué.</p>
+        <h2 class="section-intro__title">Alcance: lo que incluí, lo que dejé fuera y por qué</h2>
+        <p class="section-intro__subtitle">Cada decisión de recorte tiene una razón explícita. Esto es lo que prioricé para el MVP y lo que reservé para iteraciones futuras.</p>
       </div>
 
       <div class="scope-grid">
@@ -1172,8 +1131,8 @@
       <!-- Section intro -->
       <div class="section-intro reveal">
         <div class="section-intro__number">07 · Impacto esperado</div>
-        <h2 class="section-intro__title">Hipótesis de impacto, no promesas</h2>
-        <p class="section-intro__subtitle">Cada métrica es una hipótesis con lógica causal que explica por qué debería moverse.</p>
+        <h2 class="section-intro__title">Cómo mediría el impacto de este rediseño</h2>
+        <p class="section-intro__subtitle">Sin acceso a datos de producción, propongo un framework de métricas donde cada indicador tiene una lógica causal: qué debería cambiar, cuánto y por qué.</p>
         <p class="section-notice">Estas métricas son hipótesis basadas en benchmark y análisis contextual. Los baselines son estimados y requieren validación en producción.</p>
       </div>
 
@@ -1191,11 +1150,11 @@
         <div class="hypothesis-card reveal stagger-1">
           <div class="hypothesis-card__tag hypothesis-card__tag--operativa">Operativa</div>
           <div class="hypothesis-card__metric">
-            <span class="hypothesis-card__value">~20s</span>
-            <span class="hypothesis-card__baseline">baseline: ~45s (estimado)</span>
+            <span class="hypothesis-card__value">20s</span>
+            <span class="hypothesis-card__baseline">baseline: 45s (estimado)</span>
           </div>
           <div class="hypothesis-card__name">Tiempo entre abrir detalle y confirmar entrega</div>
-          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Reducir de ~45s a ~20s</div>
+          <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Reducir de 45s a 20s</div>
           <div class="hypothesis-card__reason"><strong>Por qué debería moverse:</strong> Si la info está visible sin buscar (nombre, dirección, paquetes), el tiempo de resolución baja. Hoy incluye buscar datos colapsados.</div>
         </div>
         <div class="hypothesis-card reveal stagger-2">
@@ -1222,7 +1181,7 @@
           <div class="hypothesis-card__tag hypothesis-card__tag--negocio">Negocio</div>
           <div class="hypothesis-card__metric">
             <span class="hypothesis-card__value">+5-10%</span>
-            <span class="hypothesis-card__baseline">baseline: ~20/día (brief)</span>
+            <span class="hypothesis-card__baseline">baseline: 20/día (brief)</span>
           </div>
           <div class="hypothesis-card__name">Entregas completadas por día por transportista</div>
           <div class="hypothesis-card__hypothesis"><strong>Hipótesis:</strong> Aumento de 5-10% sobre baseline</div>
