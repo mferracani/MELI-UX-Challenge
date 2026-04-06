@@ -19,6 +19,29 @@ created: 2026-04-02
 
 ## Historial de commits
 
+### `a86c12c` — fix: usar nombres de archivo sin caracteres especiales para producción
+- **Fecha:** 2026-04-06
+- **Rama:** `main`
+- **Cambios:**
+  - ✅ **Imágenes hi-fi** — Copiadas con nombres limpios (`highfi-p0-vista-ruta.png`, `highfi-p1-vista-ruta-v2.png`, `highfi-p2-detalle-parada-v2.png`) para evitar que los caracteres especiales (·, —, espacios) rompan las URLs en GitHub Pages
+  - ✅ **Wireframes** — Copiados con nombres limpios (`wf-p0-inicio-hotsale.png` a `wf-p4-entrega-confirmada.png`) por el mismo motivo
+  - ✅ **index.html** — Rutas actualizadas a los nuevos nombres en ambas galerías
+- **Archivos:** `web/index.html`, `web/img/highfi-*.png`, `web/img/wireframes-v2/wf-*.png`
+
+---
+
+### `df5ca50` — feat: actualizar wireframes y pantallas hi-fi con nuevas versiones de Figma
+- **Fecha:** 2026-04-06
+- **Rama:** `main`
+- **Cambios:**
+  - ✅ **Pantallas hi-fi** — Reemplazadas 2 pantallas anteriores por 3 nuevas versiones de Figma (P0, P1, P2) desde carpeta `Hi-fi/`
+  - ✅ **Wireframes** — Reemplazados los 5 wireframes anteriores por nuevas versiones (P0 Inicio Hot Sale, P1 Vista de ruta, P2 Navegando a la zona, P3 Confirmar entrega, P4 Entrega confirmada)
+  - ✅ **Texto descriptivo** — Actualizado de "Las dos pantallas" a "Las tres pantallas más críticas del flujo"
+  - ✅ **Reorganización Obsidian** — Carpetas renombradas a estructura numerada (01 Investigación, 02 Proceso, 03 Análisis, 04 Iteración, 05 Assets)
+- **Archivos:** `web/index.html`, `web/img/Hi-fi/` (3 pantallas), `web/img/wireframes-v2/` (5 pantallas)
+
+---
+
 ### `b9354ea` — fix: bridge card full width, remove em-dash from S3 source
 - **Fecha:** 2026-04-05
 - **Rama:** `narrative-review` → mergeado a `main`
@@ -173,9 +196,8 @@ MELI/
 ## Próximos pasos
 
 - [x] **User Flow** — Imagen del diagrama integrada en la sección Diseño
-- [x] **Pantallas wireframes v2** — Reemplazadas las 5 pantallas de baja definición
-- [x] **Pantallas high-fi** — Insertas las pantallas P1 y P2 en alta definición
+- [x] **Pantallas wireframes v2** — Reemplazadas las 5 pantallas (P0–P4) con nuevas versiones de Figma
+- [x] **Pantallas high-fi v2** — 3 pantallas en alta definición (P0, P1, P2) desde Figma, rutas limpias para producción
 - [x] **v2 iteration** — Contexto operativo, supuestos, alcance, diseño resiliente, edge cases, hipótesis de impacto
-- [ ] **Wireframe P3 (En camino)** — Agregar imagen a `wireframes v2/` cuando esté lista
 - [ ] **Link a Figma** — Actualizar el `href` del botón "Abrir en Figma" con el link real al prototipo
 - [ ] **Testing** — Documentar resultados de tests de usabilidad (si aplica)
