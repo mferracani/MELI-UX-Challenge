@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow Map — MELI Flex Driver App</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f5; color: #1a1a1a; padding: 32px; }
+
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { font-size: 14px; color: #666; margin-bottom: 32px; }
+
+  .legend { display: flex; gap: 24px; margin-bottom: 32px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+  .legend-dot { width: 14px; height: 14px; border-radius: 4px; }
+  .dot-exists { background: #1a8c66; }
+  .dot-missing { background: #cc3d3d; border: 2px dashed #cc3d3d; background: #fff; }
+  .dot-edge { background: #e6a817; }
+
+  .flow-section { margin-bottom: 48px; }
+  .section-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .section-desc { font-size: 13px; color: #888; margin-bottom: 20px; }
+
+  .flow-row { display: flex; align-items: flex-start; gap: 12px; overflow-x: auto; padding-bottom: 16px; }
+
+  .screen-card {
+    min-width: 200px; max-width: 200px;
+    border-radius: 12px; padding: 16px;
+    background: #fff; border: 2px solid #e0e0e0;
+    position: relative;
+  }
+  .screen-card.exists { border-color: #1a8c66; }
+  .screen-card.missing { border: 2px dashed #cc3d3d; background: #fff5f5; }
+  .screen-card.edge { border-color: #e6a817; background: #fffdf5; }
+
+  .screen-id { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .screen-id.exists { color: #1a8c66; }
+  .screen-id.missing { color: #cc3d3d; }
+  .screen-id.edge { color: #b8860b; }
+
+  .screen-name { font-size: 14px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+  .screen-elements { font-size: 12px; color: #555; line-height: 1.6; }
+  .screen-elements li { margin-left: 16px; margin-bottom: 2px; }
+
+  .screen-feedback { margin-top: 10px; padding: 8px; background: #f0f7ff; border-radius: 6px; font-size: 11px; color: #2b63de; font-weight: 600; }
+
+  .arrow-connector {
+    min-width: 48px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; align-self: center;
+    gap: 4px;
+  }
+  .arrow-line { font-size: 20px; color: #999; }
+  .arrow-label { font-size: 10px; color: #999; font-weight: 600; text-align: center; white-space: nowrap; }
+
+  .branch-container { margin-top: 16px; padding-left: 32px; border-left: 3px solid #e6a817; }
+  .branch-label { font-size: 12px; font-weight: 700; color: #b8860b; margin-bottom: 12px; }
+
+  .gap-callout {
+    background: #fff5f5; border: 1px solid #f0c0c0; border-radius: 10px;
+    padding: 16px 20px; margin: 12px 0;
+  }
+  .gap-callout h3 { font-size: 14px; color: #cc3d3d; margin-bottom: 6px; }
+  .gap-callout p { font-size: 13px; color: #666; line-height: 1.5; }
+
+  .loop-indicator {
+    margin-top: 12px; padding: 10px 14px;
+    background: #f0f0ff; border-radius: 8px; border: 1px solid #d0d0ee;
+    font-size: 12px; color: #555;
+  }
+  .loop-indicator strong { color: #4040aa; }
+
+  .summary-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .summary-table th { text-align: left; padding: 10px 12px; background: #f5f5f5; font-size: 12px; font-weight: 700; border-bottom: 2px solid #ddd; }
+  .summary-table td { padding: 10px 12px; font-size: 13px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .status-exists { color: #1a8c66; font-weight: 700; }
+  .status-missing { color: #cc3d3d; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<h1>🗺️ Flow Map — MELI Flex Driver App</h1>
+<p class="subtitle">Mapeo completo de pantallas, transiciones y gaps identificados en el flujo optimizado</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot dot-exists"></div> Pantalla existente en Figma</div>
+  <div class="legend-item"><div class="legend-dot dot-missing"></div> Pantalla faltante (gap)</div>
+  <div class="legend-item"><div class="legend-dot dot-edge"></div> Edge case / rama alternativa</div>
+</div>
+
+<!-- ========== MACRO FLOW ========== -->
+<div class="flow-section">
+  <div class="section-title">1. Flujo macro: Inicio → Fin de jornada</div>
+  <div class="section-desc">El loop principal del driver durante un día Hot Sale</div>
+
+  <div class="flow-row">
+    <div class="screen-card exists">
+      <div class="screen-id exists">P0v2 — EXISTE</div>
+      <div class="screen-name">Inicio de jornada — Hot Sale</div>
+      <ul class="screen-elements">
+        <li>120 paquetes / 85 paradas / 8 zonas</li>
+        <li>3 alertas copiloto</li>
+        <li>CTA: "Empezar a repartir"</li>
+      </ul>
+      <div class="screen-feedback">Feedback #1: Stress Test</div>
+    </div>
+
+    <div class="arrow-connector">
+      <div class="arrow-label">Empezar<br>a repartir</div>
+      <div class="arrow-line">→</div>
+    </div>
+
+    <div class="screen-card exists">
+      <div class="screen-id exists">P1v2 — EXISTE</div>
+      <div class="screen-name">Vista de ruta — Mapa con clusters</div>
+      <ul class="screen-elements">
+        <li>Mapa con pins de zonas + badge cantidad</li>
+        <li>Lista colapsable de zonas</li>
+        <li>Barra progreso 0/85</li>
+        <li>CTA: "Ir a primera zona"</li>
+      </ul>
+      <div class="screen-feedback">Feedback #1: Scalability</div>
+    </div>
+
+    <div class="arrow-connector">
+      <div class="arrow-label">Ir a<br>zona</div>
+      <div class="arrow-line">→</div>
+    </div>
+
+    <div class="screen-card missing">
+      <div class="screen-id missing">P2 — FALTA ⚠️</div>
+      <div class="screen-name">Navegando a zona / parada</div>
+      <ul class="screen-elements">
+        <li>Mapa GPS en modo navegación</li>
+        <li>ETA + distancia restante</li>
+        <li>Alerta copiloto contextual</li>
+        <li>"Llegué" como CTA al arribar</li>
+      </ul>
+      <div class="screen-feedback">Feedback #4: Copiloto en contexto</div>
+    </div>
+
+    <div class="arrow-connector">
+      <div class="arrow-label">Llegué al<br>edificio</div>
+      <div class="arrow-line">→</div>
+    </div>
+
+    <div class="screen-card exists">
+      <div class="screen-id exists">P1b — EXISTE</div>
+      <div class="screen-name">Sub-lista edificio — Torre Central</div>
+      <ul class="screen-elements">
+        <li>3 entregas agrupadas por piso</li>
+        <li>Orden desc: 12C → 7B → 3A</li>
+        <li>CTA: "Empezar en piso 12"</li>
+      </ul>
+      <div class="screen-feedback">Feedback #1: Densidad edificios</div>
+    </div>
+
+    <div class="arrow-connector">
+      <div class="arrow-label">Empezar<br>piso 12</div>
+      <div class="arrow-line">→</div>
+    </div>
+
+    <div class="screen-card missing">
+      <div class="screen-id missing">P3 — FALTA ⚠️</div>
+      <div class="screen-name">En la puerta — Depto 12C</div>
+      <ul class="screen-elements">
+        <li>Nombre destinatario + paquete</li>
+        <li>Alerta copiloto: "Timbre roto, golpear"</li>
+        <li>Botones: "Entregar" / "No pude"</li>
+        <li>Timer de espera (opcional)</li>
+      </ul>
+      <div class="screen-feedback">Feedback #4: Copiloto en punto de entrega</div>
+    </div>
+
+    <div class="arrow-connector">
+      <div class="arrow-label">Entregar</div>
+      <div class="arrow-line">→</div>
+    </div>
+
+    <div class="screen-card exists">
+      <div class="screen-id exists">P4v2 — EXISTE</div>
+      <div class="screen-name">Confirmar entrega — 3 dígitos DNI</div>
+      <ul class="screen-elements">
+        <li>¿Quién recibió? (radio)</li>
+        <li>3 inputs PIN grandes (70x70)</li>
+        <li>Foto del paquete</li>
+        <li>CTA: "Confirmar entrega"</li>
+      </ul>
+      <div class="screen-feedback">Feedback #3: Fricción DNI</div>
+    </div>
+
+    <div class="arrow-connector">
+      <div class="arrow-label">Confirmar</div>
+      <div class="arrow-line">→</div>
+    </div>
+
+    <div class="screen-card missing">
+      <div class="screen-id missing">P4c — FALTA ⚠️</div>
+      <div class="screen-name">Entrega confirmada ✓</div>
+      <ul class="screen-elements">
+        <li>✅ "Entrega confirmada"</li>
+        <li>Siguiente: "Ir a piso 7 — Depto B"</li>
+        <li>Progreso edificio: 1/3</li>
+        <li>Auto-redirect 3s o tap</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="loop-indicator">
+    <strong>🔄 Loop interno (edificio):</strong> P3 → P4 → P4c → vuelve a P3 con el siguiente piso (7B, luego 3A). Al completar el edificio → vuelve a P1 (mapa) para ir al siguiente cluster.<br><br>
+    <strong>🔄 Loop externo (zonas):</strong> P1 → P2 → P1b/P3 → ... → al completar todas las zonas → P5 (Jornada completada).
+  </div>
+</div>
+
+<!-- ========== EDGE CASES ========== -->
+<div class="flow-section">
+  <div class="section-title">2. Ramas alternativas (edge cases)</div>
+  <div class="section-desc">Caminos que se bifurcan desde el flujo principal</div>
+
+  <div class="branch-container">
+    <div class="branch-label">↳ Desde P3 o P4 → "No pude entregar"</div>
+    <div class="flow-row">
+      <div class="screen-card edge">
+        <div class="screen-id edge">P2b — EXISTE</div>
+        <div class="screen-name">No pude entregar</div>
+        <ul class="screen-elements">
+          <li>Motivos predefinidos (radio buttons)</li>
+          <li>Card copiloto: "Intentalo después de 18h"</li>
+          <li>CTA: "Confirmar problema"</li>
+          <li>Link: "Volver al mapa"</li>
+        </ul>
+        <div class="screen-feedback">Feedback #3 + #4</div>
+      </div>
+      <div class="arrow-connector">
+        <div class="arrow-label">Confirmar<br>problema</div>
+        <div class="arrow-line">→</div>
+      </div>
+      <div class="screen-card missing">
+        <div class="screen-id missing">P2c — FALTA ⚠️</div>
+        <div class="screen-name">Problema registrado</div>
+        <ul class="screen-elements">
+          <li>"Registrado. Siguiente parada:"</li>
+          <li>Opción: "Reintentar más tarde"</li>
+          <li>Auto-redirect a siguiente entrega</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="branch-container" style="margin-top: 24px;">
+    <div class="branch-label">↳ Desde P4 → Sin conexión</div>
+    <div class="flow-row">
+      <div class="screen-card edge">
+        <div class="screen-id edge">P4 OFFLINE — EXISTE</div>
+        <div class="screen-name">Confirmar entrega — Offline Mode</div>
+        <ul class="screen-elements">
+          <li>Banner: "⚠️ Sin conexión"</li>
+          <li>Misma UI que P4 (zero learning curve)</li>
+          <li>Validación local con hash DNI</li>
+          <li>Contador: "🔄 3 pendientes de sync"</li>
+        </ul>
+        <div class="screen-feedback">Feedback #2: Offline</div>
+      </div>
+      <div class="arrow-connector">
+        <div class="arrow-label">Confirmar<br>offline</div>
+        <div class="arrow-line">→</div>
+      </div>
+      <div class="screen-card missing">
+        <div class="screen-id missing">P4c OFF — FALTA ⚠️</div>
+        <div class="screen-name">Entrega en cola de sync</div>
+        <ul class="screen-elements">
+          <li>"✅ Guardado localmente"</li>
+          <li>"Se sincronizará con conexión"</li>
+          <li>Siguiente parada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="branch-container" style="margin-top: 24px;">
+    <div class="branch-label">↳ Volver a conectarse (puede pasar en cualquier momento)</div>
+    <div class="flow-row">
+      <div class="screen-card missing">
+        <div class="screen-id missing">TOAST SYNC — FALTA ⚠️</div>
+        <div class="screen-name">Sync completado (toast/snackbar)</div>
+        <ul class="screen-elements">
+          <li>No es pantalla completa, es overlay</li>
+          <li>"✅ 3 entregas sincronizadas"</li>
+          <li>Aparece sobre cualquier pantalla</li>
+          <li>Auto-dismiss en 4s</li>
+        </ul>
+        <div class="screen-feedback">Feedback #2: Cierre del loop offline</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CIERRE ========== -->
+<div class="flow-section">
+  <div class="section-title">3. Cierre de jornada</div>
+  <div class="section-desc">Cuando se completaron todas las paradas (o el driver decide cerrar)</div>
+  <div class="flow-row">
+    <div class="screen-card exists">
+      <div class="screen-id exists">P5v2 — EXISTE</div>
+      <div class="screen-name">Jornada completada — Hot Sale</div>
+      <ul class="screen-elements">
+        <li>82/85 entregas · 6h12m</li>
+        <li>Resumen copiloto IA</li>
+        <li>CTA: "Finalizar jornada"</li>
+        <li>Link: "Ver detalle de entregas"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========== COPILOTO OVERLAY ========== -->
+<div class="flow-section">
+  <div class="section-title">4. Copiloto IA — ¿Dónde vive?</div>
+  <div class="section-desc">El copiloto no es una pantalla propia, es un sistema de alertas que aparece en múltiples contextos</div>
+
+  <div class="flow-row">
+    <div class="screen-card exists" style="border-color: #e6a817;">
+      <div class="screen-id" style="color: #b8860b;">COPILOTO IA — REEVALUAR</div>
+      <div class="screen-name">Alerta preventiva (pantalla actual)</div>
+      <ul class="screen-elements">
+        <li>Actualmente es un frame independiente</li>
+        <li>Pero el copiloto debería ser un <strong>componente reutilizable</strong> que aparece en:</li>
+      </ul>
+      <div style="margin-top: 10px; font-size: 12px; color: #555; line-height: 1.6;">
+        → <strong>P2 (Navegando):</strong> "Edificio con portero eléctrico, llamar al 4B"<br>
+        → <strong>P3 (En la puerta):</strong> "Timbre roto, golpear fuerte"<br>
+        → <strong>P2b (No pude):</strong> "Intentalo después de 18h"<br>
+        → <strong>P0 (Inicio):</strong> "3 alertas para hoy"<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== RESUMEN GAPS ========== -->
+<div class="flow-section">
+  <div class="section-title">5. Resumen: Pantallas existentes vs. faltantes</div>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Pantalla</th>
+        <th>Estado</th>
+        <th>Feedback que ataca</th>
+        <th>Notas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>P0v2</td><td>Inicio de jornada</td><td class="status-exists">✅ Existe</td><td>#1 Stress Test</td><td>—</td></tr>
+      <tr><td>P1v2</td><td>Vista de ruta — Mapa clusters</td><td class="status-exists">✅ Existe</td><td>#1 Scalability</td><td>—</td></tr>
+      <tr><td>P2</td><td>Navegando a zona/parada</td><td class="status-missing">❌ Falta</td><td>#4 Copiloto</td><td>Donde vive la navegación GPS + alertas copiloto en camino</td></tr>
+      <tr><td>P1b</td><td>Sub-lista edificio</td><td class="status-exists">✅ Existe</td><td>#1 Densidad</td><td>—</td></tr>
+      <tr><td>P3</td><td>En la puerta — Depto 12C</td><td class="status-missing">❌ Falta</td><td>#4 Copiloto</td><td>Pantalla de "llegué", pre-entrega con alerta copiloto</td></tr>
+      <tr><td>P4v2</td><td>Confirmar entrega — 3 dígitos</td><td class="status-exists">✅ Existe</td><td>#3 Fricción</td><td>—</td></tr>
+      <tr><td>P4c</td><td>Entrega confirmada ✓</td><td class="status-missing">❌ Falta</td><td>—</td><td>Success state + redirect a siguiente parada</td></tr>
+      <tr><td>P5v2</td><td>Jornada completada</td><td class="status-exists">✅ Existe</td><td>#1+#4</td><td>—</td></tr>
+      <tr><td>P2b</td><td>No pude entregar</td><td class="status-exists">✅ Existe</td><td>#3+#4</td><td>—</td></tr>
+      <tr><td>P2c</td><td>Problema registrado</td><td class="status-missing">❌ Falta</td><td>—</td><td>Confirmación + redirect</td></tr>
+      <tr><td>P4 OFF</td><td>Confirmar offline</td><td class="status-exists">✅ Existe</td><td>#2 Offline</td><td>—</td></tr>
+      <tr><td>P4c OFF</td><td>Entrega en cola sync</td><td class="status-missing">❌ Falta</td><td>#2 Offline</td><td>Success state offline</td></tr>
+      <tr><td>TOAST</td><td>Sync completado</td><td class="status-missing">❌ Falta</td><td>#2 Offline</td><td>Overlay, no pantalla completa</td></tr>
+    </tbody>
+  </table>
+
+  <div class="gap-callout" style="margin-top: 24px;">
+    <h3>📊 Score: 7 pantallas existentes · 6 faltantes</h3>
+    <p>Las pantallas existentes cubren los momentos clave pero faltan las <strong>transiciones</strong> y <strong>estados de confirmación</strong> que conectan el flujo. Sin P2 (navegando) y P3 (en la puerta), no queda claro cómo el driver llega de "ver la lista" a "confirmar entrega". Sin P4c (success), no se entiende el loop de múltiples entregas en un edificio.</p>
+  </div>
+</div>
+
+<div class="flow-section">
+  <div class="section-title">6. Relación entre pantallas: Copiloto actual</div>
+  <div class="section-desc">La pantalla "Copiloto IA MVP · Alerta preventiva" que existe hoy en Figma</div>
+
+  <div class="gap-callout" style="background: #fffdf0; border-color: #e6d88a;">
+    <h3 style="color: #8a7a20;">💡 Recomendación: Disolver el Copiloto como pantalla</h3>
+    <p>El Copiloto IA no debería ser una pantalla independiente. Debería ser un <strong>componente card</strong> que aparece contextualmente en P2 (navegando), P3 (en la puerta), P2b (no pude) y P0 (inicio). La pantalla actual del Copiloto se convierte en <strong>P2 (Navegando a parada)</strong> con la alerta como componente embebido.</p>
+  </div>
+</div>
+
+</body>
+</html>

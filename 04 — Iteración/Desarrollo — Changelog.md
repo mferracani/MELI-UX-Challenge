@@ -19,6 +19,52 @@ created: 2026-04-02
 
 ## Historial de commits
 
+### `b9354ea` — fix: bridge card full width, remove em-dash from S3 source
+- **Fecha:** 2026-04-05
+- **Rama:** `narrative-review` → mergeado a `main`
+- **Cambios:**
+  - ✅ **Puente narrativo** — Card "De la investigación a la solución" llevada a ancho completo del layout (eliminado `max-width: 800px` inline)
+  - ✅ **Tabla de supuestos S3** — Eliminado guion largo en "Inferencia del wireframe, no confirmable"
+- **Archivos:** `web/index.html`
+
+---
+
+### `5afa8d6` — refactor(narrative): implement full narrative review
+- **Fecha:** 2026-04-05
+- **Rama:** `narrative-review` → mergeado a `main`
+- **Cambios:**
+  - ✅ **Hero subtitle** — Reescrito para ser concreto y visual: "una mano libre y 2 segundos de mirada"
+  - ✅ **Resumen ejecutivo** — Impacto etiquetado como hipótesis con rangos reales (~45s a ~20s), no porcentajes
+  - ✅ **Sección 01 subtitle** — Conectado a la señal real del brief: caída de NPS y patrón compartido
+  - ✅ **Meta-etiquetas de citas** (Carlos, Claudia, Pablo, Teresa) — Reescritas para exponer el patrón de IA específico en lugar de necesidades genéricas
+  - ✅ **Sección 02 título** — Elevado a "Cuatro dolores, un solo problema" para declarar la tesis central
+  - ✅ **Sección 03 subtitle** — Reescrito en primera persona: "Qué pude confirmar, qué tuve que asumir..."
+  - ✅ **Puente narrativo** — Nueva sección entre Investigación y Solución que conecta los hallazgos con las decisiones de diseño
+  - ✅ **Copiloto subtitle** — Eliminado guion largo separador; reemplazado por punto y frase separada
+  - ✅ **Direction card** — "Dirección A —" → "Dirección elegida:" sin guion
+  - ✅ **Pain resolution** — Agregada 5ta fila: "Sin visibilidad de progreso"
+  - ✅ **HMW cerrados** — Nueva sección "Los HMW, respondidos" con tabla de 4 respuestas explícitas
+  - ✅ **Auto-elogio eliminado** — Quitado "Esto demuestra pensamiento de producto real"
+  - ✅ **Sección 05 subtitle** — Reescrito: "Cómo se traduce cada decisión en estructura, jerarquía y pantallas concretas"
+  - ✅ **Wireframes intro** — Pasado a primera persona: "exploré la estructura..."
+  - ✅ **Hi-fi intro** — Reescrito con especificidad: "Las dos pantallas más críticas del flujo"
+  - ✅ **Guiones largos** — Eliminados como separadores en todo el texto narrativo visible; reemplazados por dos puntos o puntos seguidos
+  - ✅ **KPI sublabel** — Guion → punto para flujo natural
+- **Archivos:** `web/index.html`
+
+---
+
+### `4713e91` — fix: remove em-dashes from exec summary, wireframes caption and heading
+- **Fecha:** 2026-04-05
+- **Rama:** `main`
+- **Cambios:**
+  - ✅ **Resumen ejecutivo** — Eliminados guiones largos separadores en el campo de impacto
+  - ✅ **Caption wireframes** — Ajuste de texto en el caption del user flow
+  - ✅ **Subtítulo de sección** — Corrección de guion en heading de wireframes
+- **Archivos:** `web/index.html`
+
+---
+
 ### `978e947` — feat: v2 iteration — product thinking depth upgrade
 - **Fecha:** 2026-04-04
 - **Rama:** `feature/v2-iteration` → mergeado a `main`
